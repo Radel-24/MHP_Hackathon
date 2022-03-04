@@ -49,12 +49,14 @@ while traci.simulation.getMinExpectedNumber() > 0:
 	total_co2 = 0
 	total_fuel = 0
 	total_noise = 0
+	standing_cars = 0
 	for vehicle in vehicles:
-		if (traci.vehicle.getSpeed() == 0):
+		if (traci.vehicle.getSpeed(vehicle) == 0):
+			standing_cars += 1
 			continue
 		total_co2 += traci.vehicle.getCO2Emission(vehicle)
 		total_fuel += traci.vehicle.getFuelConsumption(vehicle)
-		total_noise = dbsum(total_noise, traci.vehicle.getNoiseEmission(vehicle))
+		# total_noise = dbsum(total_noise, float(traci.vehicle.getNoiseEmission(vehicle)))
 
 	#print("step:" + str(i))
 	#print(traci.vehicle.getSubscriptionResults(vehID))
@@ -65,9 +67,9 @@ while traci.simulation.getMinExpectedNumber() > 0:
 		info = {
 			"timestamp": i,
 			"CO2": total_co2,
-			"fuel": traci.vehicle.getFuelConsumption(vehID),
+			"fuel": total_fuel,
 			"noise": traci.vehicle.getNoiseEmission(vehID),
-			"standing_cars": 42
+			"standing_cars": standing_cars
 		}
 		csv_writer.writerow(info)
 	#print(x_value, total_1, total_2, total_3, total_4)
