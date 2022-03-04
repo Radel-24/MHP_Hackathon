@@ -50,6 +50,8 @@ while traci.simulation.getMinExpectedNumber() > 0:
 	total_fuel = 0
 	total_noise = 0
 	for vehicle in vehicles:
+		if (traci.vehicle.getSpeed() == 0):
+			continue
 		total_co2 += traci.vehicle.getCO2Emission(vehicle)
 		total_fuel += traci.vehicle.getFuelConsumption(vehicle)
 		total_noise = dbsum(total_noise, traci.vehicle.getNoiseEmission(vehicle))
