@@ -35,7 +35,7 @@ traci.setOrder(1)
 
 fieldnames = ["timestamp", "CO2", "fuel", "noise", "standing_cars"]
 
-with open('data.csv', 'w') as csv_file:
+with open('../sumoVisualizer/data.csv', 'w') as csv_file:
 	csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 	csv_writer.writeheader()
 
@@ -62,7 +62,7 @@ while traci.simulation.getMinExpectedNumber() > 0:
 	#print(traci.vehicle.getSubscriptionResults(vehID))
 	#print("CO2: " + str(traci.vehicle.getCO2Emission(vehID)))
 
-	with open('data.csv', 'a') as csv_file:
+	with open('../sumoVisualizer/data.csv', 'a') as csv_file:
 		csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 		info = {
 			"timestamp": i,

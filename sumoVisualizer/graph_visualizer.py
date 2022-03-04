@@ -14,10 +14,10 @@ fig1, (ax1, ax2) = plt.subplots(nrows=2, ncols=1) # create subplots (multiple gr
 def animate(i):
 	# read in data from csv file
 	data = pd.read_csv('data.csv')
-	x = data['x_value']
-	y1 = data['traffic_amount_1']
-	y2 = data['traffic_amount_2']
-	y3 = data['traffic_amount_3']
+	x = data['timestamp']
+	y1 = data['CO2']
+	y2 = data['fuel']
+	# y3 = data['traffic_amount_3']
 	# y4 = data['traffic_amount_4']
 
 	ax1.cla()
@@ -25,19 +25,19 @@ def animate(i):
 	# ax3.cla()
 
 	# each plot is a line
-	ax1.plot(x, y1, label='Street 1')
-	ax1.plot(x, y2, label='Street 2')
-	ax2.plot(x, y3, label='Street 3', color='#ff0000')
+	ax1.plot(x, y1, label='CO2')
+	# ax1.plot(x, y2, label='Street 2')
+	ax2.plot(x, y2, label='fuel', color='#ff0000')
 	# ax3.plot(x, y4, label='Street 4')
 
 	ax1.legend(loc='upper left')
-	ax1.set_title('Street traffic data')
-	ax1.set_ylabel('cars on street')
+	ax1.set_title('CO2')
+	ax1.set_ylabel('CO2')
 
 	ax2.legend(loc='upper left')
-	ax2.set_title('Street traffic data2')
-	ax2.set_xlabel('time2')
-	ax2.set_ylabel('cars on street2')
+	ax2.set_title('fuel')
+	ax2.set_xlabel('time')
+	ax2.set_ylabel('fuel')
 
 	# ax3.legend(loc='upper left')
 	# ax3.set_title('Street traffic data3')
