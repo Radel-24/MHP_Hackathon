@@ -41,6 +41,12 @@ with open('data.csv', 'w') as csv_file:
 
 i = 0
 while traci.simulation.getMinExpectedNumber() > 0:
+	vehicles = traci.vehicle.getIDList()
+	total_co2 = 0
+	total_fuel = 0
+	total_noise = 0
+	for vehicle in vehicles:
+		total_co2 += traci.vehicle.getCO2Emission(vehicle)
 	traci.simulationStep()
 	#print("step:" + str(i))
 	i += 1
@@ -50,7 +56,7 @@ while traci.simulation.getMinExpectedNumber() > 0:
 		csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 		info = {
 			"timestamp": i,
-			"CO2": traci.vehicle.getCO2Emission(vehID),
+			"CO2": total_co2,
 			"fuel": traci.vehicle.getFuelConsumption(vehID),
 			"noise": traci.vehicle.getNoiseEmission(vehID),
 			"standing_cars": 42
