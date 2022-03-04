@@ -28,10 +28,10 @@ traci.start([sumoBinary, "-c", sys.argv[1], "--num-clients", "1", "--emission-ou
 # traci.start(sumoCmd)
 traci.setOrder(1)
 
-vehID = 'left_0'
+# vehID = 'left_0'
 
-traci.vehicle.subscribe(vehID, (tc.VAR_ROAD_ID, tc.VAR_LANEPOSITION))
-print(traci.vehicle.getSubscriptionResults(vehID))
+# traci.vehicle.subscribe(vehID, (tc.VAR_ROAD_ID, tc.VAR_LANEPOSITION))
+# print(traci.vehicle.getSubscriptionResults(vehID))
 
 fieldnames = ["timestamp", "CO2", "fuel", "noise", "standing_cars"]
 
@@ -68,7 +68,7 @@ while traci.simulation.getMinExpectedNumber() > 0:
 			"timestamp": i,
 			"CO2": total_co2,
 			"fuel": total_fuel,
-			"noise": traci.vehicle.getNoiseEmission(vehID),
+			"noise": 42,
 			"standing_cars": standing_cars
 		}
 		csv_writer.writerow(info)

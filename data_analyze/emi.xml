@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2022-03-04 15:49:33 by Eclipse SUMO GUI Version 1.12.0
+<!-- generated on 2022-03-04 15:55:06 by Eclipse SUMO GUI Version 1.12.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
@@ -23,7 +23,7 @@
     </report>
 
     <traci_server>
-        <remote-port value="60653"/>
+        <remote-port value="55889"/>
         <num-clients value="1"/>
     </traci_server>
 
@@ -52,10 +52,5 @@
         <vehicle id="left_0" eclass="HBEFA3/PC_G_EU4" CO2="2691.33" CO="112.04" HC="0.57" NOx="1.14" PMx="0.05" fuel="1.16" electricity="0.00" noise="59.42" route="left" type="typeWE" waiting="0.00" lane="2i_0" pos="5.69" speed="3.32" angle="270.00" x="1004.31" y="511.65"/>
         <vehicle id="left_1" eclass="HBEFA3/PC_G_EU4" CO2="2624.72" CO="164.78" HC="0.81" NOx="1.20" PMx="0.07" fuel="1.13" electricity="0.00" noise="55.94" route="left" type="typeWE" waiting="0.00" lane="52o_0" pos="5.10" speed="0.00" angle="270.00" x="1014.90" y="511.65"/>
         <vehicle id="right_2" eclass="HBEFA3/PC_G_EU4" CO2="2698.65" CO="144.21" HC="0.72" NOx="1.20" PMx="0.06" fuel="1.16" electricity="0.00" noise="59.42" route="right" type="typeWE" waiting="0.00" lane="51o_0" pos="7.00" speed="1.29" angle="90.00" x="7.00" y="508.35"/>
-    </timestep>
-    <timestep time="6.00">
-        <vehicle id="left_0" eclass="HBEFA3/PC_G_EU4" CO2="2670.51" CO="105.26" HC="0.54" NOx="1.12" PMx="0.05" fuel="1.15" electricity="0.00" noise="59.44" route="left" type="typeWE" waiting="0.00" lane="2i_0" pos="9.45" speed="3.75" angle="270.00" x="1000.55" y="511.65"/>
-        <vehicle id="left_1" eclass="HBEFA3/PC_G_EU4" CO2="2675.71" CO="152.98" HC="0.76" NOx="1.21" PMx="0.06" fuel="1.15" electricity="0.00" noise="59.48" route="left" type="typeWE" waiting="0.00" lane="52o_0" pos="5.84" speed="0.74" angle="270.00" x="1014.16" y="511.65"/>
-        <vehicle id="right_2" eclass="HBEFA3/PC_G_EU4" CO2="2608.41" CO="135.63" HC="0.68" NOx="1.15" PMx="0.06" fuel="1.12" electricity="0.00" noise="58.41" route="right" type="typeWE" waiting="0.00" lane="51o_0" pos="8.70" speed="1.70" angle="90.00" x="8.70" y="508.35"/>
     </timestep>
 </emission-export>
