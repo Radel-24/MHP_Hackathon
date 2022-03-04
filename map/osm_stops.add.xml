@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2022-03-04 17:00:14 by Eclipse SUMO netconvert Version 1.12.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <type-files value="/usr/share/sumo/data/typemap/osmNetconvert.typ.xml"/>
+        <osm-files value="osm_bbox.osm.xml"/>
+    </input>
+
+    <output>
+        <output-file value="osm.net.xml"/>
+        <output.street-names value="true"/>
+        <output.original-names value="true"/>
+        <ptstop-output value="osm_stops.add.xml"/>
+        <ptline-output value="osm_ptlines.xml"/>
+    </output>
+
+    <projection>
+        <proj.utm value="true"/>
+    </projection>
+
+    <processing>
+        <geometry.remove value="true"/>
+        <roundabouts.guess value="true"/>
+    </processing>
+
+    <tls_building>
+        <tls.discard-simple value="true"/>
+        <tls.join value="true"/>
+        <tls.guess-signals value="true"/>
+        <tls.default-type value="actuated"/>
+    </tls_building>
+
+    <ramp_guessing>
+        <ramps.guess value="true"/>
+    </ramp_guessing>
+
+    <junctions>
+        <junctions.join value="true"/>
+        <junctions.corner-detail value="5"/>
+    </junctions>
+
+    <railway>
+        <railway.topology.repair value="true"/>
+        <railway.topology.repair.stop-turn value="true"/>
+    </railway>
+
+    <report>
+        <verbose value="true"/>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <busStop id="-1124806783" name="Domnauer Straße" lane="-309598724#3_0" startPos="0.00" endPos="7.50" friendlyPos="true" lines="170 246"/>
+    <busStop id="-1132823536" name="Lerchenweg" lane="-648493467#6_0" startPos="68.49" endPos="83.49" friendlyPos="true" lines="282"/>
+    <busStop id="-1644430698" name="Rathausstraße/Kaiserstraße" lane="-151617776#13_0" startPos="76.61" endPos="88.95" friendlyPos="true" lines="282"/>
+    <busStop id="-1673078281" name="Richard-Tauber-Damm/Säntisstraße" lane="-154837296#2_0" startPos="28.29" endPos="43.29" friendlyPos="true" lines="277"/>
+    <busStop id="-1706123248" name="Wilhelm-von-Siemens-Straße" lane="-674133615#3_0" startPos="1.38" endPos="14.43" friendlyPos="true" lines="M77 277"/>
+    <busStop id="-1932503322" name="S Lichtenrade" lane="-5086454_0" startPos="333.82" endPos="491.31" friendlyPos="true">
+        <access lane="-776487538_0" pos="0.00" length="62.28" friendlyPos="1"/>
+        <access lane="-789847967_0" pos="38.84" length="84.31" friendlyPos="1"/>
+        <access lane="776487538_0" pos="60.41" length="65.12" friendlyPos="1"/>
+        <access lane="789847967_0" pos="0.00" length="84.22" friendlyPos="1"/>
+        <access lane="997120419#0_0" pos="0.00" length="25.82" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-2633635518" name="S Schichauweg" lane="-5086821_0" startPos="221.72" endPos="421.72" friendlyPos="true">
+        <access lane="255641737_0" pos="42.17" length="5.53" friendlyPos="1"/>
+        <access lane="255641742_0" pos="8.26" length="33.90" friendlyPos="1"/>
+        <access lane="37974195_0" pos="0.00" length="38.31" friendlyPos="1"/>
+        <access lane="37974196_0" pos="69.48" length="46.60" friendlyPos="1"/>
+        <access lane="397472131_0" pos="0.00" length="33.86" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-29769442" name="Asbestweg" lane="-947014753#3_0" startPos="18.36" endPos="33.36" friendlyPos="true" lines="179"/>
+    <busStop id="-29884257" name="Dirschelweg" lane="-844527457#1_0" startPos="38.92" endPos="53.92" friendlyPos="true" lines="282"/>
+    <busStop id="-30740233" name="S Buckower Chaussee" lane="-349933513#0_0" startPos="0.00" endPos="180.28" friendlyPos="true">
+        <access lane="120793895_0" pos="81.01" length="9.51" friendlyPos="1"/>
+        <access lane="120793899#2_0" pos="9.31" length="8.75" friendlyPos="1"/>
+        <access lane="255655049_0" pos="0.20" length="17.55" friendlyPos="1"/>
+        <access lane="255655050_0" pos="0.55" length="18.19" friendlyPos="1"/>
+        <access lane="255655051_0" pos="0.00" length="22.30" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-324820676" name="Nunsdorfer Ring Nord" lane="-149849709#6_0" startPos="31.26" endPos="46.26" friendlyPos="true" lines="X83"/>
+    <busStop id="-324820677" name="Nunsdorfer Ring Süd" lane="-320823303#4_0" startPos="17.22" endPos="30.40" friendlyPos="true" lines="X83"/>
+    <busStop id="-324820685" name="Sperenberger Straße" lane="-320823303#14_0" startPos="14.24" endPos="29.24" friendlyPos="true" lines="X83"/>
+    <busStop id="-324820688" name="Egestorffstraße" lane="-605101258#6_0" startPos="21.41" endPos="36.41" friendlyPos="true" lines="X83"/>
+    <busStop id="-324820691" name="Simpsonweg" lane="-589691158_0" startPos="20.01" endPos="35.01" friendlyPos="true" lines="X83"/>
+    <busStop id="-324822677" name="Rennsteig" lane="-79701272#13_0" startPos="0.00" endPos="11.73" friendlyPos="true" lines="X76 X83 N81"/>
+    <busStop id="-324822679" name="Rennsteig" lane="-793358797#12_0" startPos="0.00" endPos="11.61" friendlyPos="true" lines="743 X76 X83 N81"/>
+    <busStop id="-324823176" name="Nahariyastraße" lane="-450086113#0_0" startPos="2.63" endPos="10.13" friendlyPos="true" lines="X76 X83 N81"/>
+    <busStop id="-330412331" name="S Schichauweg" lane="-30014331#1_0" startPos="811.26" endPos="1011.26" friendlyPos="true">
+        <access lane="255641736_0" pos="0.20" length="11.57" friendlyPos="1"/>
+        <access lane="255641741_0" pos="0.20" length="13.86" friendlyPos="1"/>
+        <access lane="255641743_0" pos="5.40" length="11.30" friendlyPos="1"/>
+        <access lane="255641744_0" pos="0.00" length="10.40" friendlyPos="1"/>
+        <access lane="255641747#0_0" pos="0.00" length="10.58" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-332219312" name="S Marienfelde" lane="-4830124_0" startPos="70.21" endPos="270.21" friendlyPos="true">
+        <access lane="120395207#4_0" pos="29.16" length="23.16" friendlyPos="1"/>
+        <access lane="255906109#0_0" pos="15.39" length="11.64" friendlyPos="1"/>
+        <access lane="255906109#1_0" pos="3.71" length="26.75" friendlyPos="1"/>
+        <access lane="49963583_0" pos="12.00" length="26.25" friendlyPos="1"/>
+        <access lane="691307034#1_0" pos="40.19" length="16.77" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-332219316" name="S Marienfelde" lane="-5086877_0" startPos="151.49" endPos="351.49" friendlyPos="true">
+        <access lane="120395207#5_0" pos="4.42" length="49.77" friendlyPos="1"/>
+        <access lane="304860161#1_0" pos="13.81" length="47.82" friendlyPos="1"/>
+        <access lane="304860161#2_0" pos="2.03" length="45.27" friendlyPos="1"/>
+        <access lane="659056153#1_0" pos="18.10" length="28.53" friendlyPos="1"/>
+        <access lane="691307034#0_0" pos="17.60" length="44.17" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-34654812" name="S Buckower Chaussee" lane="-349933514_0" startPos="868.66" endPos="1051.76" friendlyPos="true">
+        <access lane="120793895_0" pos="83.93" length="6.02" friendlyPos="1"/>
+        <access lane="120793899#2_0" pos="6.34" length="12.14" friendlyPos="1"/>
+        <access lane="255655049_0" pos="0.20" length="12.38" friendlyPos="1"/>
+        <access lane="255655050_0" pos="0.55" length="15.27" friendlyPos="1"/>
+        <access lane="255655051_0" pos="0.00" length="16.90" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-3472963023" name="Gerlinger Straße" lane="-22910107#8_0" startPos="2.86" endPos="17.86" friendlyPos="true" lines="172 N81"/>
+    <busStop id="-3675413507" name="Taunusstraße" lane="-793358797#4_0" startPos="41.89" endPos="56.89" friendlyPos="true" lines="743 X76 X83 N81"/>
+    <busStop id="-3835766163" name="Halker Zeile" lane="-589687024#18_0" startPos="19.05" endPos="34.05" friendlyPos="true" lines="277"/>
+    <busStop id="-3835766170" name="S Buckower Chaussee" lane="-712355891#1_0" startPos="0.00" endPos="7.60" friendlyPos="true" lines="X11 M11 277"/>
+    <busStop id="-3837126269" name="Quarzweg/Marienfelder Chaussee" lane="-49163611#3_0" startPos="0.00" endPos="7.79" friendlyPos="true" lines="N81 179"/>
+    <busStop id="-3858390216" name="S Lichtenrade" lane="-345381310#0_0" startPos="14.05" endPos="29.05" friendlyPos="true" lines="275 175"/>
+    <busStop id="-3884823900" name="Friedenstraße/Großbeerenstraße" lane="-200767375#12_0" startPos="3.79" endPos="18.79" friendlyPos="true" lines="181"/>
+    <busStop id="-3884823906" name="Goldenes Horn Süd" lane="-156350662#0_0" startPos="43.52" endPos="51.02" friendlyPos="true" lines="181"/>
+    <busStop id="-3884823909" name="Im Rosengrund" lane="-160765508#24_0" startPos="6.18" endPos="21.18" friendlyPos="true" lines="181"/>
+    <busStop id="-3884823920" name="Rotkopfweg" lane="-156350662#5_0" startPos="14.80" endPos="29.80" friendlyPos="true" lines="181"/>
+    <busStop id="-3884823937" name="Windröschenweg" lane="-160765508#13_0" startPos="0.00" endPos="10.25" friendlyPos="true" lines="181"/>
+    <busStop id="-3887481874" name="Oberlandgarten" lane="-836498471#1_0" startPos="4.34" endPos="19.34" friendlyPos="true" lines="246"/>
+    <busStop id="-3887481876" name="Oberlandstraße Mitte" lane="-4586332#4_0" startPos="25.73" endPos="40.73" friendlyPos="true" lines="246"/>
+    <busStop id="-3887481886" name="Saalburgstraße" lane="-5364954#1_0" startPos="70.12" endPos="85.12" friendlyPos="true" lines="N77 277"/>
+    <busStop id="-3948196597" name="Barnetstraße/Steinstraße" lane="-30084960#15_0" startPos="12.21" endPos="27.21" friendlyPos="true" lines="172 X83"/>
+    <busStop id="-3948196607" name="Goltzstraße/Lichtenrader Damm" lane="-50003453#2_0" startPos="22.69" endPos="37.69" friendlyPos="true" lines="743 M76 275"/>
+    <busStop id="-3948196611" name="Homburgstraße" lane="-160765597#5_0" startPos="41.78" endPos="56.78" friendlyPos="true" lines="172 N81"/>
+    <busStop id="-3948196630" name="Rehagener Straße" lane="-4378528#9_0" startPos="94.84" endPos="109.84" friendlyPos="true" lines="743 M76 275"/>
+    <busStop id="-3948196632" name="Steinstraße/Rhinstraße" lane="-4378695#2_0" startPos="66.47" endPos="81.47" friendlyPos="true" lines="172 275"/>
+    <busStop id="-3948196635" name="Rixdorfer Straße/Ullsteinstraße" lane="-970998126#0_0" startPos="0.64" endPos="15.64" friendlyPos="true" lines="170"/>
+    <busStop id="-3948196638" name="Skutaristraße" lane="-648493467#25_0" startPos="0.00" endPos="11.35" friendlyPos="true" lines="282"/>
+    <busStop id="-3948690917" name="U Westphalweg" lane="-436757168#3_0" startPos="0.00" endPos="8.77" friendlyPos="true" lines="282"/>
+    <busStop id="-3949690685" name="Culemeyerstraße" lane="-589687024#5_0" startPos="31.20" endPos="46.20" friendlyPos="true" lines="277"/>
+    <busStop id="-3949690687" name="Benzstraße" lane="-461128132#0_0" startPos="15.39" endPos="30.39" friendlyPos="true" lines="277 283"/>
+    <busStop id="-3949690688" name="Erinnerungsstätte Marienfelde" lane="-25415937#13_0" startPos="177.50" endPos="192.50" friendlyPos="true" lines="M77"/>
+    <busStop id="-3949690691" name="Daimlerstr./Industriegebiet" lane="-154837267#8_0" startPos="64.19" endPos="79.19" friendlyPos="true" lines="277 283"/>
+    <busStop id="-3949690698" name="Hranitzkystraße" lane="-25415937#8_0" startPos="25.06" endPos="40.06" friendlyPos="true" lines="M77"/>
+    <busStop id="-3949690701" name="Körtingstraße" lane="-674133616#2_0" startPos="3.90" endPos="18.90" friendlyPos="true" lines="M77 277"/>
+    <busStop id="-3949690709" name="Schwechtenstraße" lane="-589687024#12_0" startPos="24.87" endPos="39.87" friendlyPos="true" lines="277"/>
+    <busStop id="-3949690710" name="Titlisweg" lane="-154837267#9_0" startPos="0.00" endPos="13.02" friendlyPos="true" lines="277 283"/>
+    <busStop id="-3950033301" name="Greinerstraße" lane="-60911745#0_0" startPos="41.73" endPos="56.73" friendlyPos="true" lines="181"/>
+    <busStop id="-3950033319" name="Porschestraße" lane="-200767375#1_0" startPos="7.84" endPos="22.84" friendlyPos="true" lines="181"/>
+    <busStop id="-3953103192" name="Gersdorfstraße/Kaiserstraße" lane="-151617776#2_0" startPos="0.00" endPos="12.96" friendlyPos="true" lines="282"/>
+    <busStop id="-3953103194" name="Gersdorfstraße/Kaiserstraße" lane="-4677910#7_0" startPos="0.00" endPos="11.41" friendlyPos="true" lines="M76 X76"/>
+    <busStop id="-3953103195" name="Gersdorfstraße/Kurfürstenstraße" lane="-4677910#4_0" startPos="146.68" endPos="161.68" friendlyPos="true" lines="M76"/>
+    <busStop id="-3953103197" name="Prühßstraße" lane="-30958680#7_0" startPos="67.20" endPos="82.20" friendlyPos="true" lines="M76"/>
+    <busStop id="-3953103201" name="Ringstraße/Kurfürstenstraße" lane="-4677913#2_0" startPos="29.17" endPos="44.17" friendlyPos="true" lines="282"/>
+    <busStop id="-3953205604" name="Alboinstraße/Arnulfstraße" lane="-309598724#2_0" startPos="112.14" endPos="127.14" friendlyPos="true" lines="170 246"/>
+    <busStop id="-3953205608" name="Attilaplatz" lane="-108776738#1_0" startPos="4.22" endPos="16.16" friendlyPos="true" lines="170"/>
+    <busStop id="-3953205611" name="Berlinickeplatz" lane="-464372608#2_0" startPos="0.00" endPos="8.67" friendlyPos="true" lines="N7X 140 M46 N84"/>
+    <busStop id="-3953205618" name="Chlodwigstraße" lane="-181092057#7_0" startPos="59.51" endPos="74.51" friendlyPos="true" lines="N84 184"/>
+    <busStop id="-3953205631" name="Ringbahnstraße" lane="-169753571#2_0" startPos="17.06" endPos="32.06" friendlyPos="true" lines="140"/>
+    <busStop id="-3953205637" name="Röblingstraße/Attilastraße" lane="-181092057#2_0" startPos="92.18" endPos="107.18" friendlyPos="true" lines="N84 184"/>
+    <busStop id="-3953205647" name="U Kaiserin-Augusta-Straße" lane="-151353906#5_0" startPos="0.24" endPos="15.24" friendlyPos="true" lines="184"/>
+    <busStop id="-3953205649" name="Wittekindstraße" lane="-4663228#1_0" startPos="12.90" endPos="27.90" friendlyPos="true" lines="170 246"/>
+    <busStop id="-3960133657" name="Baldersheimer Weg" lane="-22910107#4_0" startPos="54.93" endPos="69.93" friendlyPos="true" lines="172 N81"/>
+    <busStop id="-3960133661" name="John-Locke-Straße" lane="-325000951#4_0" startPos="3.07" endPos="18.07" friendlyPos="true" lines="172"/>
+    <busStop id="-3960133663" name="Kambergstraße" lane="-282985769#7_0" startPos="21.58" endPos="36.58" friendlyPos="true" lines="172 N81"/>
+    <busStop id="-3960133665" name="Kloster-Zinna-Straße" lane="-282985769#11_0" startPos="23.51" endPos="38.51" friendlyPos="true" lines="172 N81"/>
+    <busStop id="-3960133667" name="Rathenower Straße/Töpchiner Weg" lane="-156350705#0_0" startPos="11.10" endPos="26.10" friendlyPos="true" lines="172 N81"/>
+    <busStop id="-3960133668" name="Riedingerstraße" lane="-156579502#2_0" startPos="12.59" endPos="27.59" friendlyPos="true" lines="172"/>
+    <busStop id="-3960133670" name="Seltersstraße" lane="-282985769#3_0" startPos="45.47" endPos="60.47" friendlyPos="true" lines="172 N81"/>
+    <busStop id="-3992224598" name="Colditzstraße" lane="-151369411#1_0" startPos="54.02" endPos="69.02" friendlyPos="true" lines="170"/>
+    <busStop id="-3992224601" name="Egelingzeile" lane="-71834345#5_0" startPos="12.48" endPos="27.48" friendlyPos="true" lines="106"/>
+    <busStop id="-3992224603" name="Eresburgstraße" lane="-8008819#3_0" startPos="0.00" endPos="9.67" friendlyPos="true" lines="106"/>
+    <busStop id="-3992224608" name="Komturstraße" lane="-31003576#1_0" startPos="0.00" endPos="9.87" friendlyPos="true" lines="M46"/>
+    <busStop id="-3992224609" name="Komturstraße" lane="-4357829#3_0" startPos="11.28" endPos="23.26" friendlyPos="true" lines="M46"/>
+    <busStop id="-3992224610" name="Rohdestraße" lane="-31003576#12_0" startPos="34.11" endPos="49.11" friendlyPos="true" lines="M46"/>
+    <busStop id="-3992224612" name="Wenckebachstraße" lane="-785567931#4_0" startPos="26.76" endPos="41.76" friendlyPos="true" lines="170"/>
+    <busStop id="-3992457050" name="Am Rötepfuhl" lane="-947307091#1_0" startPos="42.35" endPos="57.35" friendlyPos="true" lines="N81 179"/>
+    <busStop id="-3992457056" name="Galluner Straße" lane="-284494942#14_0" startPos="7.87" endPos="16.67" friendlyPos="true" lines="175"/>
+    <busStop id="-3992457460" name="Grünsteinweg" lane="-156346080#10_0" startPos="95.02" endPos="110.02" friendlyPos="true" lines="179"/>
+    <busStop id="-3992457462" name="Hilbertstraße" lane="-152434827#5_0" startPos="12.57" endPos="27.57" friendlyPos="true" lines="275"/>
+    <busStop id="-3992457468" name="Im Domstift/Groß-Ziethener Straße" lane="-211549617#4_0" startPos="0.00" endPos="14.50" friendlyPos="true" lines="743 X76 X83 N81"/>
+    <busStop id="-3992457470" name="Kirchhainer Damm/Horstwalder Straße" lane="-284494942#2_0" startPos="14.05" endPos="22.97" friendlyPos="true" lines="175"/>
+    <busStop id="-3992457472" name="Paplitzer Straße" lane="-284494942#11_0" startPos="83.42" endPos="98.42" friendlyPos="true" lines="175"/>
+    <busStop id="-3992457477" name="Tropfsteinweg" lane="-947014754#1_0" startPos="35.58" endPos="50.58" friendlyPos="true" lines="179"/>
+    <busStop id="-3992457483" name="Wolziger Zeile" lane="-152434827#0_0" startPos="13.88" endPos="28.88" friendlyPos="true" lines="275"/>
+    <busStop id="-4032902706" name="Am Hellespont" lane="-158580766#6_0" startPos="0.00" endPos="13.52" friendlyPos="true" lines="282"/>
+    <busStop id="-4032902708" name="Belßstraße/Marienfelder Allee" lane="-69409362#6_0" startPos="2.35" endPos="17.35" friendlyPos="true" lines="283"/>
+    <busStop id="-4032902711" name="Dardanellenweg" lane="-469999015#0_0" startPos="44.83" endPos="52.33" friendlyPos="true" lines="282"/>
+    <busStop id="-4032902712" name="Dardanellenweg" lane="-469999012#0_0" startPos="0.00" endPos="12.13" friendlyPos="true" lines="282"/>
+    <busStop id="-4032902713" name="Didostraße" lane="-648493467#20_0" startPos="33.16" endPos="48.16" friendlyPos="true" lines="282"/>
+    <busStop id="-4032902724" name="Kollostraße" lane="-648493467#9_0" startPos="32.65" endPos="47.65" friendlyPos="true" lines="282"/>
+    <busStop id="-4032902725" name="Kosleckweg" lane="-648493467#15_0" startPos="0.00" endPos="8.88" friendlyPos="true" lines="282"/>
+    <busStop id="-4032902742" name="Sonnenscheinpfad" lane="-69409362#0_0" startPos="85.04" endPos="100.04" friendlyPos="true" lines="283"/>
+    <busStop id="-4032902744" name="Volkmarstraße" lane="-4677871#3_0" startPos="29.39" endPos="44.39" friendlyPos="true" lines="170"/>
+    <busStop id="-4277830362" name="S Lichtenrade" lane="-345381310#0_0" startPos="16.50" endPos="24.00" friendlyPos="true" lines="743 M76 172"/>
+    <busStop id="-637820357" name="Felixstraße" lane="-151456841#7_0" startPos="0.00" endPos="12.23" friendlyPos="true" lines="M46 246"/>
+    <busStop id="-7577135100" name="S Lichtenrade" lane="-152434827#9_0" startPos="0.00" endPos="7.64" friendlyPos="true" lines="275"/>
+    <busStop id="-853670941" name="Alboinplatz" lane="-71834345#0_0" startPos="66.70" endPos="81.70" friendlyPos="true" lines="106"/>
+    <busStop id="1126452638" name="Am Heidefriedhof" lane="29890787#0_0" startPos="0.00" endPos="11.94" friendlyPos="true" lines="N77 277 181"/>
+    <busStop id="1131278230" name="Am Heidefriedhof" lane="451621859#2_0" startPos="10.97" endPos="25.97" friendlyPos="true" lines="N77 277 181">
+        <access lane="-280420352#0_0" pos="1.33" length="18.33" friendlyPos="1"/>
+        <access lane="107330058#2_0" pos="56.94" length="14.57" friendlyPos="1"/>
+        <access lane="280420352#0_0" pos="0.00" length="14.34" friendlyPos="1"/>
+        <access lane="280420352#2_0" pos="0.00" length="18.48" friendlyPos="1"/>
+        <access lane="741838171#6_0" pos="4.35" length="14.72" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1630285857" name="Forddamm" lane="461840233#2_0" startPos="59.44" endPos="66.94" friendlyPos="true" lines="179"/>
+    <busStop id="1641970590" name="U Kaiserin-Augusta-Straße" lane="386496523#1_0" startPos="0.00" endPos="113.49" friendlyPos="true" lines="U6">
+        <access lane="-728040604_0" pos="0.00" length="24.71" friendlyPos="1"/>
+        <access lane="171364190#1_0" pos="72.11" length="24.44" friendlyPos="1"/>
+        <access lane="171364190#2_0" pos="3.19" length="15.52" friendlyPos="1"/>
+        <access lane="327627449#1_0" pos="49.77" length="6.54" friendlyPos="1"/>
+        <access lane="728040607#1_0" pos="16.32" length="22.27" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1641989545" name="Berlinickeplatz" lane="464372608#0_0" startPos="54.45" endPos="69.45" friendlyPos="true" lines="140 M46 N84"/>
+    <busStop id="1644430703" name="Rathausstraße/Kaiserstraße" lane="151617776#8_0" startPos="52.48" endPos="63.91" friendlyPos="true" lines="282"/>
+    <busStop id="1688091813" name="Friedenstraße/Großbeerenstraße" lane="398618993#1_0" startPos="0.10" endPos="15.10" friendlyPos="true" lines="M77 277"/>
+    <busStop id="1706123233" name="Wilhelm-von-Siemens-Straße" lane="674133615#4_0" startPos="19.18" endPos="34.18" friendlyPos="true" lines="M77 277"/>
+    <busStop id="1833366802" name="U Alt-Mariendorf" lane="385129612#3_0" startPos="0.00" endPos="12.32" friendlyPos="true"/>
+    <busStop id="1932503322" name="S Lichtenrade" lane="5086454_0" startPos="0.00" endPos="157.49" friendlyPos="true">
+        <access lane="-776487538_0" pos="0.00" length="62.28" friendlyPos="1"/>
+        <access lane="-789847967_0" pos="38.84" length="84.31" friendlyPos="1"/>
+        <access lane="776487538_0" pos="60.41" length="65.12" friendlyPos="1"/>
+        <access lane="789847967_0" pos="0.00" length="84.22" friendlyPos="1"/>
+        <access lane="997120419#0_0" pos="0.00" length="25.82" friendlyPos="1"/>
+    </busStop>
+    <busStop id="2057568261" name="Rixdorfer Straße/Ullsteinstraße" lane="970998122_0" startPos="0.00" endPos="0.50" friendlyPos="true"/>
+    <busStop id="2155228656" name="U Alt-Mariendorf" lane="391889972#1_0" startPos="32.31" endPos="47.31" friendlyPos="true" lines="M76 X76 179"/>
+    <busStop id="2232779931" name="Berlinickeplatz" lane="128141531_0" startPos="34.33" endPos="49.33" friendlyPos="true" lines="246"/>
+    <busStop id="2524190142" name="Porschestraße" lane="200767375#5_0" startPos="0.00" endPos="10.97" friendlyPos="true" lines="181"/>
+    <busStop id="2633635518" name="S Schichauweg" lane="28486326#0_0" startPos="435.34" endPos="635.34" friendlyPos="true" lines="S2">
+        <access lane="255641737_0" pos="42.17" length="5.53" friendlyPos="1"/>
+        <access lane="255641742_0" pos="8.26" length="33.90" friendlyPos="1"/>
+        <access lane="37974195_0" pos="0.00" length="38.31" friendlyPos="1"/>
+        <access lane="37974196_0" pos="69.48" length="46.60" friendlyPos="1"/>
+        <access lane="397472131_0" pos="0.00" length="33.86" friendlyPos="1"/>
+    </busStop>
+    <busStop id="26554197" name="U Alt-Tempelhof" lane="151372365#1_0" startPos="197.02" endPos="211.21" friendlyPos="true"/>
+    <busStop id="276998054" name="Benzstraße" lane="154837267#12_0" startPos="42.30" endPos="50.02" friendlyPos="true" lines="283"/>
+    <busStop id="29058344" name="U Alt-Tempelhof" lane="386496523#1_0" startPos="0.00" endPos="113.49" friendlyPos="true" lines="U6">
+        <access lane="196856069#1_0" pos="7.26" length="12.59" friendlyPos="1"/>
+        <access lane="196856069#2_0" pos="0.00" length="12.29" friendlyPos="1"/>
+        <access lane="196856070#3_0" pos="43.06" length="0.52" friendlyPos="1"/>
+        <access lane="30709737#0_0" pos="0.00" length="12.91" friendlyPos="1"/>
+        <access lane="409588238#0_0" pos="8.05" length="10.14" friendlyPos="1"/>
+    </busStop>
+    <busStop id="2959911355" name="U Alt-Tempelhof" lane="4395057#4_0" startPos="65.50" endPos="80.50" friendlyPos="true" lines="140 N6 N84 184"/>
+    <busStop id="2959939716" name="Mariendorfer Damm/Eisenacher Straße" lane="151619285#6_0" startPos="17.09" endPos="32.09" friendlyPos="true" lines="N6"/>
+    <busStop id="2959939717" name="Rathaus Tempelhof" lane="176372126#6_0" startPos="0.00" endPos="10.69" friendlyPos="true" lines="N6 184"/>
+    <busStop id="2959939719" name="U Ullsteinstraße / Ordensmeisterstraße" lane="195259831#3_0" startPos="89.17" endPos="104.17" friendlyPos="true" lines="N6"/>
+    <busStop id="2959939720" name="U Kaiserin-Augusta-Straße" lane="171364190#3_0" startPos="0.00" endPos="11.76" friendlyPos="true" lines="N6"/>
+    <busStop id="2959939721" name="U Ullsteinstraße" lane="151619285#1_0" startPos="29.95" endPos="44.95" friendlyPos="true" lines="N6"/>
+    <busStop id="2959939722" name="U Westphalweg" lane="30699233#2_0" startPos="109.58" endPos="122.43" friendlyPos="true" lines="N6"/>
+    <busStop id="2959940322" name="U Alt-Mariendorf" lane="478432727#0_0" startPos="0.00" endPos="7.70" friendlyPos="true" lines="M77 N6 277 181"/>
+    <busStop id="29657606" name="U Ullsteinstraße / Ordensmeisterstraße" lane="58700249#1_0" startPos="17.42" endPos="32.42" friendlyPos="true" lines="170"/>
+    <busStop id="29769444" name="Tropfsteinweg" lane="156346080#16_0" startPos="26.59" endPos="41.59" friendlyPos="true" lines="N81 179"/>
+    <busStop id="3009249216" name="Kosleckweg" lane="648493467#13_0" startPos="36.18" endPos="51.18" friendlyPos="true" lines="282"/>
+    <busStop id="3009251770" name="Didostraße" lane="648493467#20_0" startPos="56.31" endPos="66.83" friendlyPos="true" lines="282"/>
+    <busStop id="3043920508" name="U Alt-Mariendorf" lane="806903756_0" startPos="0.00" endPos="160.16" friendlyPos="true" lines="U6">
+        <access lane="31002031#0_0" pos="0.00" length="33.76" friendlyPos="1"/>
+        <access lane="379464644#3_0" pos="33.13" length="41.85" friendlyPos="1"/>
+        <access lane="391889971#2_0" pos="36.06" length="20.86" friendlyPos="1"/>
+        <access lane="391889972#1_0" pos="50.69" length="7.01" friendlyPos="1"/>
+        <access lane="508171954_0" pos="20.10" length="51.03" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3045559658" name="U Alt-Tempelhof" lane="387345822_0" startPos="130.64" endPos="330.64" friendlyPos="true" lines="U6">
+        <access lane="116703659_0" pos="46.13" length="12.33" friendlyPos="1"/>
+        <access lane="196856069#0_0" pos="16.06" length="60.33" friendlyPos="1"/>
+        <access lane="196856069#1_0" pos="0.00" length="60.12" friendlyPos="1"/>
+        <access lane="196856069#2_0" pos="0.00" length="63.44" friendlyPos="1"/>
+        <access lane="487201071#0_0" pos="36.84" length="6.13" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3045559667" name="U Kaiserin-Augusta-Straße" lane="387345822_0" startPos="130.64" endPos="330.64" friendlyPos="true" lines="U6">
+        <access lane="-728040598_0" pos="43.52" length="15.69" friendlyPos="1"/>
+        <access lane="171364190#3_0" pos="6.85" length="0.20" friendlyPos="1"/>
+        <access lane="327627449#1_0" pos="17.20" length="21.81" friendlyPos="1"/>
+        <access lane="540439875_0" pos="19.71" length="6.86" friendlyPos="1"/>
+        <access lane="728040600_0" pos="0.00" length="20.31" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3045559677" name="U Ullsteinstraße" lane="387345822_0" startPos="130.64" endPos="330.64" friendlyPos="true" lines="U6">
+        <access lane="-111048867_0" pos="0.00" length="12.51" friendlyPos="1"/>
+        <access lane="-651802439#0_0" pos="1.86" length="17.78" friendlyPos="1"/>
+        <access lane="111048867_0" pos="2.56" length="16.43" friendlyPos="1"/>
+        <access lane="5363714#5_0" pos="1.43" length="6.53" friendlyPos="1"/>
+        <access lane="5363715_0" pos="1.40" length="6.06" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3045559684" name="U Westphalweg" lane="387345822_0" startPos="130.64" endPos="330.64" friendlyPos="true" lines="U6">
+        <access lane="-845512839_0" pos="44.53" length="22.26" friendlyPos="1"/>
+        <access lane="28680190#1_0" pos="62.59" length="15.03" friendlyPos="1"/>
+        <access lane="28680190#2_0" pos="0.00" length="21.20" friendlyPos="1"/>
+        <access lane="30699233#2_0" pos="53.76" length="5.08" friendlyPos="1"/>
+        <access lane="845512841_0" pos="0.00" length="20.56" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3045559693" name="U Alt-Mariendorf" lane="300526958_0" startPos="0.00" endPos="89.73" friendlyPos="true" lines="U6">
+        <access lane="31002031#0_0" pos="0.00" length="30.18" friendlyPos="1"/>
+        <access lane="379464644#3_0" pos="28.75" length="22.71" friendlyPos="1"/>
+        <access lane="379464645#0_0" pos="8.24" length="33.94" friendlyPos="1"/>
+        <access lane="391889971#2_0" pos="32.11" length="0.74" friendlyPos="1"/>
+        <access lane="391889972#1_0" pos="54.08" length="27.35" friendlyPos="1"/>
+    </busStop>
+    <busStop id="30740233" name="S Buckower Chaussee" lane="5086818#0_0" startPos="342.59" endPos="542.59" friendlyPos="true" lines="S2">
+        <access lane="120793895_0" pos="81.01" length="9.51" friendlyPos="1"/>
+        <access lane="120793899#2_0" pos="9.31" length="8.75" friendlyPos="1"/>
+        <access lane="255655049_0" pos="0.20" length="17.55" friendlyPos="1"/>
+        <access lane="255655050_0" pos="0.55" length="18.19" friendlyPos="1"/>
+        <access lane="255655051_0" pos="0.00" length="22.30" friendlyPos="1"/>
+    </busStop>
+    <busStop id="31034998" name="U Ullsteinstraße" lane="386496523#1_0" startPos="0.00" endPos="113.49" friendlyPos="true" lines="U6">
+        <access lane="31773580#4_0" pos="42.80" length="36.79" friendlyPos="1"/>
+        <access lane="375489218_0" pos="0.00" length="28.09" friendlyPos="1"/>
+        <access lane="375489222#0_0" pos="0.00" length="37.83" friendlyPos="1"/>
+        <access lane="4526218#0_0" pos="30.14" length="9.97" friendlyPos="1"/>
+        <access lane="609226735#2_0" pos="80.92" length="2.49" friendlyPos="1"/>
+    </busStop>
+    <busStop id="31034999" name="U Westphalweg" lane="386496523#1_0" startPos="0.00" endPos="113.49" friendlyPos="true" lines="U6">
+        <access lane="-845512839_0" pos="44.53" length="11.14" friendlyPos="1"/>
+        <access lane="28680190#1_0" pos="62.86" length="0.35" friendlyPos="1"/>
+        <access lane="28680190#2_0" pos="0.00" length="14.55" friendlyPos="1"/>
+        <access lane="30699233#2_0" pos="53.37" length="19.75" friendlyPos="1"/>
+        <access lane="845512841_0" pos="0.00" length="7.25" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3157588154" name="Felixstraße" lane="151456841#14_0" startPos="0.00" endPos="14.15" friendlyPos="true" lines="N7X M46 246"/>
+    <busStop id="324820675" name="Nunsdorfer Ring Nord" lane="149849709#6_0" startPos="25.11" endPos="40.11" friendlyPos="true" lines="X83"/>
+    <busStop id="324820678" name="Nunsdorfer Ring Süd" lane="320823303#6_0" startPos="25.17" endPos="40.17" friendlyPos="true" lines="X83"/>
+    <busStop id="324820679" name="Sperenberger Straße" lane="320823303#14_0" startPos="38.32" endPos="53.32" friendlyPos="true" lines="X83"/>
+    <busStop id="324820687" name="Egestorffstraße" lane="605101261#1_0" startPos="38.48" endPos="53.48" friendlyPos="true" lines="X83"/>
+    <busStop id="324820689" name="S Schichauweg" lane="5110892#2_0" startPos="6.18" endPos="20.16" friendlyPos="true" lines="X83"/>
+    <busStop id="324820690" name="S Schichauweg" lane="859195720#1_0" startPos="11.21" endPos="18.71" friendlyPos="true" lines="275 X83"/>
+    <busStop id="324820692" name="Simpsonweg" lane="152952074#9_0" startPos="63.85" endPos="78.85" friendlyPos="true" lines="275 X83"/>
+    <busStop id="324822687" name="Skarbinastraße" lane="79701272#7_0" startPos="0.00" endPos="10.64" friendlyPos="true" lines="X76 X83 N81"/>
+    <busStop id="324823177" name="Nahariyastraße" lane="450086113#1_0" startPos="8.88" endPos="23.88" friendlyPos="true" lines="X76 X83 N81"/>
+    <busStop id="325767696" name="S Marienfelde" lane="691307034#1_0" startPos="33.97" endPos="46.47" friendlyPos="true"/>
+    <busStop id="325767706" name="S Marienfelde" lane="508104419#1_0" startPos="0.00" endPos="4.34" friendlyPos="true"/>
+    <busStop id="327009067" name="S Schichauweg" lane="152593453#1_0" startPos="48.73" endPos="63.73" friendlyPos="true"/>
+    <busStop id="330412331" name="S Schichauweg" lane="5086822_0" startPos="0.00" endPos="129.13" friendlyPos="true" lines="S2">
+        <access lane="255641736_0" pos="0.20" length="11.57" friendlyPos="1"/>
+        <access lane="255641741_0" pos="0.20" length="13.86" friendlyPos="1"/>
+        <access lane="255641743_0" pos="5.40" length="11.30" friendlyPos="1"/>
+        <access lane="255641744_0" pos="0.00" length="10.40" friendlyPos="1"/>
+        <access lane="255641747#0_0" pos="0.00" length="10.58" friendlyPos="1"/>
+    </busStop>
+    <busStop id="332219312" name="S Marienfelde" lane="292551161_0" startPos="122.36" endPos="322.36" friendlyPos="true" lines="S2">
+        <access lane="120395207#4_0" pos="29.16" length="23.16" friendlyPos="1"/>
+        <access lane="255906109#0_0" pos="15.39" length="11.64" friendlyPos="1"/>
+        <access lane="255906109#1_0" pos="3.71" length="26.75" friendlyPos="1"/>
+        <access lane="49963583_0" pos="12.00" length="26.25" friendlyPos="1"/>
+        <access lane="691307034#1_0" pos="40.19" length="16.77" friendlyPos="1"/>
+    </busStop>
+    <busStop id="332219316" name="S Marienfelde" lane="349933511_0" startPos="107.69" endPos="303.07" friendlyPos="true" lines="S2">
+        <access lane="120395207#5_0" pos="4.42" length="49.77" friendlyPos="1"/>
+        <access lane="304860161#1_0" pos="13.81" length="47.82" friendlyPos="1"/>
+        <access lane="304860161#2_0" pos="2.03" length="45.27" friendlyPos="1"/>
+        <access lane="659056153#1_0" pos="18.10" length="28.53" friendlyPos="1"/>
+        <access lane="691307034#0_0" pos="17.60" length="44.17" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3410465343" name="Finchleystraße" lane="152596640#2_0" startPos="31.75" endPos="46.75" friendlyPos="true" lines="172 X83"/>
+    <busStop id="34654812" name="S Buckower Chaussee" lane="349933512#2_0" startPos="0.00" endPos="120.99" friendlyPos="true" lines="S2">
+        <access lane="120793895_0" pos="83.93" length="6.02" friendlyPos="1"/>
+        <access lane="120793899#2_0" pos="6.34" length="12.14" friendlyPos="1"/>
+        <access lane="255655049_0" pos="0.20" length="12.38" friendlyPos="1"/>
+        <access lane="255655050_0" pos="0.55" length="15.27" friendlyPos="1"/>
+        <access lane="255655051_0" pos="0.00" length="16.90" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3472960882" name="Baldersheimer Weg" lane="22910107#4_0" startPos="26.60" endPos="41.60" friendlyPos="true" lines="172 N81"/>
+    <busStop id="3675413512" name="Taunusstraße" lane="793358797#4_0" startPos="91.39" endPos="106.39" friendlyPos="true" lines="743 X76 X83 N81"/>
+    <busStop id="3835766161" name="Halker Zeile" lane="29887243#2_0" startPos="30.25" endPos="45.25" friendlyPos="true" lines="M11 277"/>
+    <busStop id="3835766162" name="Halker Zeile" lane="29887240#0_0" startPos="0.00" endPos="9.85" friendlyPos="true" lines="M11"/>
+    <busStop id="3835766164" name="Kettinger Straße" lane="29887240#5_0" startPos="40.47" endPos="55.47" friendlyPos="true" lines="M11"/>
+    <busStop id="3835766165" name="Kettinger Straße" lane="60913017#3_0" startPos="89.57" endPos="102.58" friendlyPos="true" lines="M11"/>
+    <busStop id="3835766166" name="Mariendorfer Damm/Buckower Chaussee" lane="37910332#1_0" startPos="26.64" endPos="36.28" friendlyPos="true" lines="M76 X76"/>
+    <busStop id="3835766167" name="Mariendorfer Damm/Buckower Chaussee" lane="5110865#2_0" startPos="12.12" endPos="27.12" friendlyPos="true" lines="X71 X11 M11"/>
+    <busStop id="3835766168" name="Mariendorfer Damm/Buckower Chaussee" lane="211576016#1_0" startPos="13.42" endPos="28.42" friendlyPos="true" lines="X11 M11"/>
+    <busStop id="3835766169" name="Mariendorfer Damm/Buckower Chaussee" lane="37910336#2_0" startPos="22.17" endPos="37.17" friendlyPos="true" lines="X71 M76 X76"/>
+    <busStop id="3835766171" name="S Buckower Chaussee" lane="29546980#2_0" startPos="38.94" endPos="46.44" friendlyPos="true" lines="X11 M11 277"/>
+    <busStop id="3837124951" name="Bühler Weg" lane="437191426#8_0" startPos="98.09" endPos="113.09" friendlyPos="true" lines="M11"/>
+    <busStop id="3837124952" name="Bühler Weg" lane="72307633#5_0" startPos="0.00" endPos="14.17" friendlyPos="true" lines="M11"/>
+    <busStop id="3837126257" name="Grauwackeweg" lane="437191426#3_0" startPos="7.04" endPos="22.04" friendlyPos="true" lines="M11"/>
+    <busStop id="3837126258" name="Grauwackeweg" lane="72307633#18_0" startPos="25.08" endPos="34.82" friendlyPos="true" lines="M11"/>
+    <busStop id="3837126270" name="Quarzweg/Marienfelder Chaussee" lane="49163611#1_0" startPos="72.26" endPos="87.26" friendlyPos="true" lines="179"/>
+    <busStop id="3837126271" name="Quarzweg/Marienfelder Chaussee" lane="340089611#0_0" startPos="0.00" endPos="10.65" friendlyPos="true" lines="X71 X11 M11"/>
+    <busStop id="3837126272" name="Quarzweg/Marienfelder Chaussee" lane="114381363#3_0" startPos="6.19" endPos="21.19" friendlyPos="true" lines="X71 X11 M11"/>
+    <busStop id="3842232850" name="Nahmitzer Damm/Motzener Straße" lane="29434391#2_0" startPos="3.56" endPos="16.13" friendlyPos="true" lines="X83"/>
+    <busStop id="3842232851" name="Nahmitzer Damm/Motzener Straße" lane="29434388#2_0" startPos="5.87" endPos="20.87" friendlyPos="true" lines="X83 M11 277"/>
+    <busStop id="3842232852" name="Nahmitzer Damm/Motzener Straße" lane="29434387#0_0" startPos="0.00" endPos="8.98" friendlyPos="true" lines="M11 277"/>
+    <busStop id="3858390213" name="Grenzweg Ost" lane="946031964#2_0" startPos="5.89" endPos="20.89" friendlyPos="true"/>
+    <busStop id="3858390214" name="Maffeistraße Ost" lane="946031964#1_0" startPos="22.25" endPos="37.25" friendlyPos="true"/>
+    <busStop id="3858390215" name="S Lichtenrade" lane="345381310#1_0" startPos="3.34" endPos="18.34" friendlyPos="true"/>
+    <busStop id="3858390217" name="S Lichtenrade" lane="345381310#1_0" startPos="15.91" endPos="30.91" friendlyPos="true" lines="743 M76 172 275"/>
+    <busStop id="3858390220" name="Wünsdorfer Straße/Blohmstraße" lane="29699808#0_0" startPos="3.27" endPos="18.27" friendlyPos="true"/>
+    <busStop id="3858390221" name="Wünsdorfer Straße/Blohmstraße" lane="29699810#5_0" startPos="79.35" endPos="94.35" friendlyPos="true" lines="275"/>
+    <busStop id="3858390222" name="Wünsdorfer Straße/Blohmstraße" lane="29699812#1_0" startPos="4.61" endPos="19.61" friendlyPos="true"/>
+    <busStop id="3858390223" name="Wünsdorfer Straße/Blohmstraße" lane="461840206#1_0" startPos="0.00" endPos="14.56" friendlyPos="true"/>
+    <busStop id="3884823898" name="Ankogelweg" lane="37910336#12_0" startPos="156.10" endPos="171.10" friendlyPos="true" lines="M76"/>
+    <busStop id="3884823899" name="Ankogelweg" lane="30962287#3_0" startPos="106.16" endPos="121.16" friendlyPos="true" lines="M76"/>
+    <busStop id="3884823901" name="Friedenstraße/Großbeerenstraße" lane="749259904#0_0" startPos="3.16" endPos="18.16" friendlyPos="true" lines="M76 M77 277 181"/>
+    <busStop id="3884823902" name="Forddamm" lane="205735222#0_0" startPos="0.08" endPos="10.97" friendlyPos="true" lines="M76">
+        <access lane="-909538017#2_0" pos="34.34" length="19.23" friendlyPos="1"/>
+        <access lane="459221224#2_0" pos="0.00" length="26.59" friendlyPos="1"/>
+        <access lane="909538017#2_0" pos="0.00" length="18.00" friendlyPos="1"/>
+        <access lane="936211280#6_0" pos="67.85" length="14.08" friendlyPos="1"/>
+        <access lane="936211280#7_0" pos="0.00" length="23.52" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3884823903" name="Glärnischweg" lane="779835107#20_0" startPos="8.92" endPos="23.92" friendlyPos="true" lines="M76 179"/>
+    <busStop id="3884823904" name="Glärnischweg" lane="30962289#4_0" startPos="238.94" endPos="252.91" friendlyPos="true" lines="M76 179"/>
+    <busStop id="3884823905" name="Goldenes Horn Süd" lane="156350662#1_0" startPos="36.65" endPos="51.65" friendlyPos="true" lines="181"/>
+    <busStop id="3884823907" name="Hundsteinweg" lane="30962289#21_0" startPos="25.04" endPos="38.89" friendlyPos="true" lines="M76 179"/>
+    <busStop id="3884823908" name="Hundsteinweg" lane="779835108#1_0" startPos="15.06" endPos="30.06" friendlyPos="true" lines="M76 179"/>
+    <busStop id="3884823913" name="Pilatusweg" lane="30962289#9_0" startPos="312.36" endPos="327.36" friendlyPos="true" lines="M76 179"/>
+    <busStop id="3884823914" name="Pilatusweg" lane="779835107#13_0" startPos="16.59" endPos="31.59" friendlyPos="true" lines="M76 179"/>
+    <busStop id="3884823915" name="Rixdorfer Straße/Britzer Straße" lane="511006147_0" startPos="3.19" endPos="18.19" friendlyPos="true" lines="181"/>
+    <busStop id="3884823916" name="Rixdorfer Straße/Britzer Straße" lane="156597526#0_0" startPos="7.65" endPos="22.65" friendlyPos="true" lines="181"/>
+    <busStop id="3884823917" name="Rixdorfer Straße/Britzer Straße" lane="30701044#0_0" startPos="14.96" endPos="29.96" friendlyPos="true" lines="N77 277"/>
+    <busStop id="3884823918" name="Rixdorfer Straße/Britzer Straße" lane="844639715#2_0" startPos="11.93" endPos="26.93" friendlyPos="true" lines="N77 277"/>
+    <busStop id="3884823919" name="Rotkopfweg" lane="156350662#4_0" startPos="34.29" endPos="49.29" friendlyPos="true" lines="181"/>
+    <busStop id="3884823921" name="Sandsteinweg" lane="30962287#15_0" startPos="24.61" endPos="39.61" friendlyPos="true" lines="M76"/>
+    <busStop id="3884823922" name="Sandsteinweg" lane="37910336#10_0" startPos="12.53" endPos="27.53" friendlyPos="true" lines="M76"/>
+    <busStop id="3884823924" name="Tauernallee/Säntisstraße" lane="30962287#1_0" startPos="2.25" endPos="17.25" friendlyPos="true" lines="X71 M76 X76"/>
+    <busStop id="3884823925" name="Tauernallee/Säntisstraße" lane="928854934#2_0" startPos="7.49" endPos="22.49" friendlyPos="true" lines="N81 179"/>
+    <busStop id="3884823926" name="Tauernallee/Säntisstraße" lane="60913020_0" startPos="62.50" endPos="75.70" friendlyPos="true"/>
+    <busStop id="3884823927" name="Tauernallee/Säntisstraße" lane="30962289#2_0" startPos="0.00" endPos="10.09" friendlyPos="true" lines="X71 M76 X76 179"/>
+    <busStop id="3884823928" name="Trabrennbahn" lane="30962289#12_0" startPos="38.56" endPos="51.57" friendlyPos="true" lines="M76 179"/>
+    <busStop id="3884823929" name="Trabrennbahn" lane="779835107#9_0" startPos="20.80" endPos="35.80" friendlyPos="true" lines="M76 179"/>
+    <busStop id="3884823931" name="U Alt-Mariendorf" lane="461840225#1_0" startPos="5.84" endPos="18.10" friendlyPos="true" lines="M76 X76 179"/>
+    <busStop id="3884823932" name="U Alt-Mariendorf" lane="478432727#0_0" startPos="0.00" endPos="7.70" friendlyPos="true"/>
+    <busStop id="3884823933" name="U Alt-Mariendorf" lane="459221258#3_0" startPos="40.70" endPos="48.20" friendlyPos="true" lines="M77 N77 277 181 N6">
+        <access lane="211151188#2_0" pos="35.13" length="16.05" friendlyPos="1"/>
+        <access lane="741838171#1_0" pos="5.35" length="28.10" friendlyPos="1"/>
+        <access lane="969987319#2_0" pos="0.20" length="25.94" friendlyPos="1"/>
+        <access lane="969987319#3_0" pos="0.23" length="19.73" friendlyPos="1"/>
+        <access lane="969987319#4_0" pos="0.69" length="11.20" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3884823934" name="U Alt-Mariendorf" lane="28680188#3_0" startPos="76.09" endPos="91.09" friendlyPos="true" lines="N6"/>
+    <busStop id="3884823936" name="Windröschenweg" lane="160765508#11_0" startPos="29.71" endPos="44.71" friendlyPos="true" lines="181"/>
+    <busStop id="3884823965" name="U Alt-Mariendorf" lane="459221260#1_0" startPos="8.75" endPos="21.25" friendlyPos="true"/>
+    <busStop id="3884823990" name="U Alt-Mariendorf" lane="969987319#4_0" startPos="0.00" endPos="3.92" friendlyPos="true"/>
+    <busStop id="3887481861" name="Bergholzstraße" lane="836498507#1_0" startPos="38.39" endPos="53.39" friendlyPos="true" lines="M46 N77 277"/>
+    <busStop id="3887481862" name="Bergholzstraße" lane="31003252#2_0" startPos="44.02" endPos="59.02" friendlyPos="true" lines="M46 N77 277"/>
+    <busStop id="3887481872" name="Industriestraße" lane="5096535#4_0" startPos="77.49" endPos="92.49" friendlyPos="true" lines="N77 277"/>
+    <busStop id="3887481875" name="Oberlandgarten" lane="836498471#1_0" startPos="6.33" endPos="20.02" friendlyPos="true" lines="246"/>
+    <busStop id="3887481877" name="Oberlandstraße Mitte" lane="4586332#3_0" startPos="24.02" endPos="39.02" friendlyPos="true" lines="246"/>
+    <busStop id="3887481878" name="Oberlandstraße/BAB" lane="31963498#1_0" startPos="19.07" endPos="34.07" friendlyPos="true" lines="246"/>
+    <busStop id="3887481879" name="Oberlandstraße/BAB" lane="31963497#0_0" startPos="30.89" endPos="44.08" friendlyPos="true" lines="246"/>
+    <busStop id="3887481880" name="Oberlandstraße/Germaniastraße" lane="31003578#1_0" startPos="16.87" endPos="31.87" friendlyPos="true" lines="N7X 246"/>
+    <busStop id="3887481881" name="Oberlandstraße/Germaniastraße" lane="156597529#0_0" startPos="47.32" endPos="62.32" friendlyPos="true" lines="M46"/>
+    <busStop id="3887481882" name="Oberlandstraße/Germaniastraße" lane="31003577_0" startPos="49.93" endPos="64.93" friendlyPos="true" lines="M46 246"/>
+    <busStop id="3887481883" name="Rixdorfer Straße/Ullsteinstraße" lane="5096535#1_0" startPos="20.05" endPos="35.05" friendlyPos="true" lines="N77 277"/>
+    <busStop id="3887481884" name="Rixdorfer Straße/Ullsteinstraße" lane="156597532#3_0" startPos="41.09" endPos="56.09" friendlyPos="true" lines="N77 277"/>
+    <busStop id="3887481885" name="Saalburgstraße" lane="5364954#1_0" startPos="7.81" endPos="22.81" friendlyPos="true" lines="N77 277"/>
+    <busStop id="3948196598" name="Barnetstraße/Steinstraße" lane="404580759#0_0" startPos="13.93" endPos="28.93" friendlyPos="true" lines="172 X83"/>
+    <busStop id="3948196601" name="Dirschelweg" lane="844639713#0_0" startPos="13.68" endPos="28.68" friendlyPos="true" lines="N77 277"/>
+    <busStop id="3948196602" name="Friedhof Mariendorf" lane="30699231#8_0" startPos="7.98" endPos="22.98" friendlyPos="true" lines="N77 277"/>
+    <busStop id="3948196603" name="Friedhof Mariendorf" lane="156597540#1_0" startPos="16.63" endPos="31.63" friendlyPos="true" lines="N77 277"/>
+    <busStop id="3948196604" name="Goethestraße/Potsdamer Straße" lane="60913023#2_0" startPos="0.00" endPos="14.45" friendlyPos="true" lines="M76 X76"/>
+    <busStop id="3948196605" name="Goethestraße/Potsdamer Straße" lane="60913022#1_0" startPos="35.64" endPos="50.64" friendlyPos="true" lines="M76 X76"/>
+    <busStop id="3948196606" name="Goltzstraße/Lichtenrader Damm" lane="50003453#0_0" startPos="0.00" endPos="12.10" friendlyPos="true" lines="743 M76 275"/>
+    <busStop id="3948196608" name="Grimmstraße" lane="30084664#1_0" startPos="32.29" endPos="47.29" friendlyPos="true" lines="M76 172 N81"/>
+    <busStop id="3948196609" name="Grimmstraße" lane="30084959#6_0" startPos="41.67" endPos="56.67" friendlyPos="true" lines="172 N81"/>
+    <busStop id="3948196610" name="Grimmstraße" lane="30084663#3_0" startPos="5.13" endPos="20.13" friendlyPos="true" lines="M76"/>
+    <busStop id="3948196612" name="Homburgstraße" lane="160765597#5_0" startPos="39.71" endPos="54.71" friendlyPos="true" lines="172 N81"/>
+    <busStop id="3948196613" name="Sommerbad Mariendorf" lane="844639717#1_0" startPos="6.41" endPos="21.41" friendlyPos="true" lines="N77 277"/>
+    <busStop id="3948196615" name="Kirchhainer Damm/Horstwalder Straße" lane="804991966#1_0" startPos="20.74" endPos="35.74" friendlyPos="true" lines="275">
+        <access lane="606542009#0_0" pos="0.20" length="43.42" friendlyPos="1"/>
+        <access lane="606542009#2_0" pos="0.00" length="46.84" friendlyPos="1"/>
+        <access lane="802261031#10_0" pos="25.77" length="10.95" friendlyPos="1"/>
+        <access lane="802261031#9_0" pos="0.20" length="45.05" friendlyPos="1"/>
+        <access lane="829543515#5_0" pos="78.62" length="27.89" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3948196616" name="Kirchhainer Damm/Horstwalder Straße" lane="804991971#1_0" startPos="17.25" endPos="32.25" friendlyPos="true" lines="275">
+        <access lane="-624011442_0" pos="0.00" length="35.76" friendlyPos="1"/>
+        <access lane="606542010#2_0" pos="0.00" length="39.92" friendlyPos="1"/>
+        <access lane="624011442_0" pos="20.44" length="39.53" friendlyPos="1"/>
+        <access lane="802261031#7_0" pos="45.85" length="27.82" friendlyPos="1"/>
+        <access lane="829543515#8_0" pos="23.21" length="11.80" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3948196617" name="Kolonie Märkische Heide" lane="804991966#6_0" startPos="143.49" endPos="158.49" friendlyPos="true" lines="275">
+        <access lane="-217280694_0" pos="257.68" length="164.94" friendlyPos="1"/>
+        <access lane="-559804996#1_0" pos="61.81" length="147.69" friendlyPos="1"/>
+        <access lane="559804996#1_0" pos="81.32" length="150.69" friendlyPos="1"/>
+        <access lane="802261031#16_0" pos="105.48" length="11.72" friendlyPos="1"/>
+        <access lane="829603893#0_0" pos="474.46" length="25.12" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3948196618" name="Kolonie Märkische Heide" lane="829543514#0_0" startPos="96.82" endPos="111.82" friendlyPos="true" lines="275">
+        <access lane="-217280694_0" pos="257.68" length="111.05" friendlyPos="1"/>
+        <access lane="-559804996#1_0" pos="52.71" length="96.96" friendlyPos="1"/>
+        <access lane="559804996#1_0" pos="90.24" length="99.97" friendlyPos="1"/>
+        <access lane="802261031#16_0" pos="67.13" length="26.44" friendlyPos="1"/>
+        <access lane="829603893#0_0" pos="512.70" length="10.62" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3948196619" name="Lichtenrader Damm 254" lane="30958167#6_0" startPos="7.82" endPos="22.82" friendlyPos="true" lines="743 M76"/>
+    <busStop id="3948196620" name="Lichtenrader Damm 254" lane="64826669#1_0" startPos="2.26" endPos="17.26" friendlyPos="true" lines="743 M76"/>
+    <busStop id="3948196621" name="Lichtenrader Damm/Barnetstraße" lane="212891839#1_0" startPos="23.45" endPos="38.45" friendlyPos="true" lines="743 M76"/>
+    <busStop id="3948196622" name="Lichtenrader Damm/Barnetstraße" lane="211549666#1_0" startPos="24.23" endPos="39.23" friendlyPos="true" lines="743 X76 X83 N81"/>
+    <busStop id="3948196623" name="Lichtenrader Damm/Barnetstraße" lane="219065201#1_0" startPos="29.60" endPos="44.60" friendlyPos="true" lines="172 X83"/>
+    <busStop id="3948196624" name="Lichtenrader Damm/Barnetstraße" lane="30084959#1_0" startPos="20.66" endPos="35.66" friendlyPos="true" lines="M76 X76 172 N81"/>
+    <busStop id="3948196625" name="Nürnberger Straße" lane="804279760#4_0" startPos="11.37" endPos="26.37" friendlyPos="true" lines="275">
+        <access lane="-363338866#0_0" pos="0.00" length="35.08" friendlyPos="1"/>
+        <access lane="363338866#0_0" pos="43.80" length="30.73" friendlyPos="1"/>
+        <access lane="802261031#3_0" pos="6.07" length="34.36" friendlyPos="1"/>
+        <access lane="802261031#4_0" pos="15.27" length="12.51" friendlyPos="1"/>
+        <access lane="829543515#11_0" pos="33.38" length="25.33" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3948196626" name="Nürnberger Straße" lane="804991971#6_0" startPos="10.42" endPos="25.42" friendlyPos="true" lines="275">
+        <access lane="-747645497#0_0" pos="0.31" length="25.87" friendlyPos="1"/>
+        <access lane="-747645497#1_0" pos="24.75" length="29.62" friendlyPos="1"/>
+        <access lane="747645497#0_0" pos="0.00" length="30.45" friendlyPos="1"/>
+        <access lane="802261031#1_0" pos="49.10" length="24.13" friendlyPos="1"/>
+        <access lane="829543515#13_0" pos="13.50" length="11.69" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3948196628" name="Raabestraße" lane="37910332#7_0" startPos="142.53" endPos="154.18" friendlyPos="true" lines="M76"/>
+    <busStop id="3948196629" name="Raabestraße" lane="156350680#11_0" startPos="22.70" endPos="37.70" friendlyPos="true" lines="M76"/>
+    <busStop id="3948196631" name="Rehagener Straße" lane="4378528#8_0" startPos="11.43" endPos="26.43" friendlyPos="true" lines="743 M76 275"/>
+    <busStop id="3948196633" name="Steinstraße/Rhinstraße" lane="4378695#1_0" startPos="17.87" endPos="32.09" friendlyPos="true" lines="172"/>
+    <busStop id="3948196634" name="Rixdorfer Straße/Ullsteinstraße" lane="824512026#0_0" startPos="11.76" endPos="19.26" friendlyPos="true" lines="170">
+        <access lane="-970998124_0" pos="1.34" length="19.35" friendlyPos="1"/>
+        <access lane="970998094_0" pos="421.98" length="10.94" friendlyPos="1"/>
+        <access lane="970998122_0" pos="0.20" length="15.30" friendlyPos="1"/>
+        <access lane="970998123#0_0" pos="41.48" length="12.28" friendlyPos="1"/>
+        <access lane="970998123#1_0" pos="0.00" length="17.76" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3948196636" name="Skutaristraße" lane="844639712#1_0" startPos="0.00" endPos="14.18" friendlyPos="true" lines="N77 277"/>
+    <busStop id="3948196637" name="Skutaristraße" lane="648493467#26_0" startPos="0.00" endPos="8.63" friendlyPos="true" lines="282"/>
+    <busStop id="3948196639" name="Skutaristraße" lane="804908632#4_0" startPos="17.15" endPos="32.15" friendlyPos="true" lines="N77 277"/>
+    <busStop id="3948690905" name="U Alt-Tempelhof" lane="311149289#2_0" startPos="37.42" endPos="52.42" friendlyPos="true" lines="N7X M46 246"/>
+    <busStop id="3948690906" name="U Alt-Tempelhof" lane="708595510#1_0" startPos="28.55" endPos="43.55" friendlyPos="true" lines="M46 246"/>
+    <busStop id="3948690907" name="U Alt-Tempelhof" lane="327627453#0_0" startPos="23.59" endPos="38.59" friendlyPos="true" lines="140 N84 184 N6"/>
+    <busStop id="3948690908" name="Mariendorfer Damm/Eisenacher Straße" lane="28680190#5_0" startPos="27.68" endPos="42.68" friendlyPos="true" lines="N6"/>
+    <busStop id="3948690909" name="Rathaus Tempelhof" lane="30245005#5_0" startPos="20.30" endPos="35.30" friendlyPos="true" lines="184 N6"/>
+    <busStop id="3948690910" name="U Ullsteinstraße / Ordensmeisterstraße" lane="58700252#2_0" startPos="17.97" endPos="30.34" friendlyPos="true" lines="170"/>
+    <busStop id="3948690911" name="U Ullsteinstraße / Ordensmeisterstraße" lane="327627452#0_0" startPos="0.00" endPos="12.66" friendlyPos="true" lines="N6"/>
+    <busStop id="3948690913" name="U Kaiserin-Augusta-Straße" lane="116703663#0_0" startPos="0.00" endPos="12.80" friendlyPos="true" lines="N6"/>
+    <busStop id="3948690915" name="U Ullsteinstraße" lane="30699234#10_0" startPos="43.28" endPos="58.28" friendlyPos="true" lines="N6"/>
+    <busStop id="3948690919" name="U Westphalweg" lane="28680190#1_0" startPos="22.84" endPos="37.84" friendlyPos="true" lines="282 N6"/>
+    <busStop id="3949690684" name="Culemeyerstraße" lane="589687024#7_0" startPos="0.00" endPos="11.84" friendlyPos="true" lines="277"/>
+    <busStop id="3949690686" name="Benzstraße" lane="49140532#1_0" startPos="13.91" endPos="28.91" friendlyPos="true" lines="N81 277"/>
+    <busStop id="3949690689" name="Erinnerungsstätte Marienfelde" lane="25415937#12_0" startPos="27.54" endPos="42.54" friendlyPos="true" lines="M77"/>
+    <busStop id="3949690690" name="Daimlerstr./Industriegebiet" lane="154837267#8_0" startPos="95.54" endPos="110.54" friendlyPos="true" lines="N81 277 283"/>
+    <busStop id="3949690692" name="Großbeerenstraße/Daimlerstraße" lane="154837267#0_0" startPos="18.33" endPos="33.33" friendlyPos="true" lines="N81 277 283"/>
+    <busStop id="3949690693" name="Großbeerenstraße/Daimlerstraße" lane="4719084_0" startPos="7.74" endPos="22.74" friendlyPos="true" lines="283"/>
+    <busStop id="3949690694" name="Großbeerenstraße/Daimlerstraße" lane="29889009#0_0" startPos="63.38" endPos="76.91" friendlyPos="true" lines="M77"/>
+    <busStop id="3949690695" name="Großbeerenstraße/Daimlerstraße" lane="29640144#1_0" startPos="39.16" endPos="54.16" friendlyPos="true" lines="M77 277"/>
+    <busStop id="3949690697" name="Hanielweg" lane="25415937#14_0" startPos="143.33" endPos="158.33" friendlyPos="true" lines="M77"/>
+    <busStop id="3949690699" name="Hranitzkystraße" lane="25415937#3_0" startPos="109.82" endPos="124.82" friendlyPos="true" lines="M77"/>
+    <busStop id="3949690700" name="Körtingstraße" lane="200767368#0_0" startPos="0.76" endPos="15.76" friendlyPos="true" lines="M77 277"/>
+    <busStop id="3949690702" name="Richard-Tauber-Damm/Säntisstraße" lane="154837296#0_0" startPos="0.00" endPos="12.84" friendlyPos="true" lines="277"/>
+    <busStop id="3949690703" name="Richard-Tauber-Damm/Säntisstraße" lane="98889119#2_0" startPos="13.33" endPos="28.33" friendlyPos="true"/>
+    <busStop id="3949690704" name="Richard-Tauber-Damm/Säntisstraße" lane="28275973#0_0" startPos="0.00" endPos="10.90" friendlyPos="true" lines="N81"/>
+    <busStop id="3949690705" name="S Marienfelde" lane="120395207#2_0" startPos="3.56" endPos="18.56" friendlyPos="true"/>
+    <busStop id="3949690706" name="S Marienfelde" lane="120395207#3_0" startPos="9.72" endPos="22.34" friendlyPos="true" lines="M77 283"/>
+    <busStop id="3949690707" name="S Marienfelde" lane="120395207#4_0" startPos="20.83" endPos="35.83" friendlyPos="true" lines="M77 N81 283"/>
+    <busStop id="3949690708" name="Schwechtenstraße" lane="589687024#16_0" startPos="25.26" endPos="40.26" friendlyPos="true" lines="277"/>
+    <busStop id="3949699482" name="Großbeerenstraße/Daimlerstraße" lane="508104399#2_0" startPos="26.85" endPos="39.35" friendlyPos="true"/>
+    <busStop id="3949699483" name="Großbeerenstraße/Daimlerstraße" lane="508104396#2_0" startPos="0.00" endPos="6.66" friendlyPos="true"/>
+    <busStop id="3950033300" name="Greinerstraße" lane="60911745#0_0" startPos="31.17" endPos="46.17" friendlyPos="true" lines="181"/>
+    <busStop id="3953103191" name="Gersdorfstraße/Kaiserstraße" lane="4677910#8_0" startPos="0.00" endPos="12.35" friendlyPos="true" lines="M76 X76"/>
+    <busStop id="3953103193" name="Gersdorfstraße/Kaiserstraße" lane="151617776#3_0" startPos="0.00" endPos="7.70" friendlyPos="true" lines="282"/>
+    <busStop id="3953103196" name="Gersdorfstraße/Kurfürstenstraße" lane="4677910#3_0" startPos="85.65" endPos="100.65" friendlyPos="true" lines="M76"/>
+    <busStop id="3953103198" name="Prühßstraße" lane="30958680#5_0" startPos="17.53" endPos="32.53" friendlyPos="true" lines="M76"/>
+    <busStop id="3953103199" name="Ringstraße/Rathausstraße" lane="30958680#10_0" startPos="89.16" endPos="104.16" friendlyPos="true" lines="M76"/>
+    <busStop id="3953103200" name="Ringstraße/Kurfürstenstraße" lane="4677913#2_0" startPos="24.03" endPos="39.03" friendlyPos="true" lines="282"/>
+    <busStop id="3953205603" name="Alboinstraße/Arnulfstraße" lane="505304355#1_0" startPos="4.13" endPos="19.13" friendlyPos="true" lines="170 246"/>
+    <busStop id="3953205605" name="Albrechtstraße/Manteuffelstraße" lane="30244894#0_0" startPos="45.03" endPos="60.03" friendlyPos="true" lines="N84 184 246"/>
+    <busStop id="3953205606" name="Albrechtstraße/Manteuffelstraße" lane="182944199#2_0" startPos="125.83" endPos="140.83" friendlyPos="true" lines="N84 184 246"/>
+    <busStop id="3953205607" name="Attilaplatz" lane="151355408#0_0" startPos="17.38" endPos="32.38" friendlyPos="true" lines="170"/>
+    <busStop id="3953205609" name="Attilaplatz" lane="182944200#1_0" startPos="18.83" endPos="28.67" friendlyPos="true" lines="N84 184 246"/>
+    <busStop id="3953205610" name="Attilaplatz" lane="435717650#5_0" startPos="12.48" endPos="27.48" friendlyPos="true" lines="N84 184 246"/>
+    <busStop id="3953205612" name="Berlinickeplatz" lane="30709741#1_0" startPos="7.39" endPos="22.39" friendlyPos="true" lines="246"/>
+    <busStop id="3953205617" name="Chlodwigstraße" lane="181092057#6_0" startPos="0.00" endPos="14.39" friendlyPos="true" lines="N84 184"/>
+    <busStop id="3953205622" name="Friedrich-Wilhelm-Straße" lane="327636274#0_0" startPos="47.77" endPos="62.77" friendlyPos="true" lines="N84 184 246"/>
+    <busStop id="3953205623" name="Friedrich-Wilhelm-Straße" lane="435717650#7_0" startPos="42.65" endPos="57.65" friendlyPos="true" lines="N84 184 246"/>
+    <busStop id="3953205632" name="Ringbahnstraße" lane="169753571#0_0" startPos="4.35" endPos="19.35" friendlyPos="true" lines="140"/>
+    <busStop id="3953205636" name="Röblingstraße/Attilastraße" lane="181092057#0_0" startPos="2.22" endPos="17.22" friendlyPos="true" lines="N84 184"/>
+    <busStop id="3953205645" name="Tankredstraße" lane="181092057#9_0" startPos="44.23" endPos="59.23" friendlyPos="true" lines="N84 184"/>
+    <busStop id="3953205646" name="Tankredstraße" lane="151355410#1_0" startPos="43.62" endPos="58.62" friendlyPos="true" lines="N84 184"/>
+    <busStop id="3953205648" name="U Kaiserin-Augusta-Straße" lane="151353906#4_0" startPos="25.73" endPos="40.73" friendlyPos="true" lines="184"/>
+    <busStop id="3960133660" name="John-Locke-Straße" lane="325000951#7_0" startPos="0.00" endPos="8.24" friendlyPos="true" lines="172"/>
+    <busStop id="3960133662" name="Kambergstraße" lane="282985769#7_0" startPos="41.00" endPos="56.00" friendlyPos="true" lines="172 N81"/>
+    <busStop id="3960133664" name="Kloster-Zinna-Straße" lane="282985769#12_0" startPos="0.00" endPos="8.41" friendlyPos="true" lines="172 N81"/>
+    <busStop id="3960133666" name="Rathenower Straße/Töpchiner Weg" lane="156350705#1_0" startPos="19.49" endPos="34.49" friendlyPos="true" lines="172 N81"/>
+    <busStop id="3960133669" name="Riedingerstraße" lane="156579502#3_0" startPos="0.00" endPos="8.70" friendlyPos="true" lines="172"/>
+    <busStop id="3960133671" name="Seltersstraße" lane="282985770#3_0" startPos="13.41" endPos="28.41" friendlyPos="true" lines="172 N81"/>
+    <busStop id="3992224599" name="Colditzstraße" lane="151369411#0_0" startPos="0.00" endPos="14.07" friendlyPos="true" lines="170"/>
+    <busStop id="3992224600" name="Egelingzeile" lane="71834345#4_0" startPos="20.46" endPos="35.46" friendlyPos="true" lines="106"/>
+    <busStop id="3992224604" name="Eresburgstraße" lane="8008819#1_0" startPos="54.56" endPos="69.56" friendlyPos="true" lines="106"/>
+    <busStop id="3992224613" name="Wenckebachstraße" lane="785567931#3_0" startPos="0.24" endPos="15.24" friendlyPos="true" lines="170"/>
+    <busStop id="3992457051" name="Am Rötepfuhl" lane="947307091#1_0" startPos="35.23" endPos="50.23" friendlyPos="true" lines="179"/>
+    <busStop id="3992457052" name="Asbestweg" lane="947014753#4_0" startPos="0.00" endPos="14.30" friendlyPos="true" lines="N81 179"/>
+    <busStop id="3992457053" name="Blohmstraße/Illigstraße" lane="255203106_0" startPos="17.42" endPos="32.42" friendlyPos="true" lines="275"/>
+    <busStop id="3992457054" name="Bornhagenweg" lane="153604237#5_0" startPos="35.02" endPos="50.02" friendlyPos="true"/>
+    <busStop id="3992457055" name="Cecilienstraße" lane="29699810#1_0" startPos="106.04" endPos="121.04" friendlyPos="true" lines="275"/>
+    <busStop id="3992457461" name="Grünsteinweg" lane="156346080#9_0" startPos="25.78" endPos="40.78" friendlyPos="true" lines="N81 179"/>
+    <busStop id="3992457464" name="Illigstraße/Grenzweg" lane="152593442#16_0" startPos="18.99" endPos="33.99" friendlyPos="true" lines="275"/>
+    <busStop id="3992457465" name="Illigstraße/Maffeistraße" lane="152593442#24_0" startPos="68.62" endPos="82.50" friendlyPos="true" lines="275"/>
+    <busStop id="3992457466" name="Illigstraße/Schichauweg" lane="152593442#1_0" startPos="0.00" endPos="9.04" friendlyPos="true" lines="275"/>
+    <busStop id="3992457467" name="Im Domstift/Groß-Ziethener Straße" lane="153604237#11_0" startPos="12.63" endPos="27.63" friendlyPos="true"/>
+    <busStop id="3992457469" name="Im Domstift/Groß-Ziethener Straße" lane="211549617#8_0" startPos="4.01" endPos="19.01" friendlyPos="true" lines="743 X76 X83 N81"/>
+    <busStop id="3992457473" name="Pechsteinstraße" lane="4394944#16_0" startPos="29.84" endPos="44.84" friendlyPos="true" lines="175"/>
+    <busStop id="3992457474" name="Sangerhauser Weg" lane="156346080#2_0" startPos="0.00" endPos="4.06" friendlyPos="true" lines="N81 179"/>
+    <busStop id="3992457475" name="Sangerhauser Weg" lane="152949422#0_0" startPos="7.25" endPos="19.70" friendlyPos="true" lines="179"/>
+    <busStop id="3992457476" name="Tietjenstraße" lane="30709383_0" startPos="30.15" endPos="45.15" friendlyPos="true"/>
+    <busStop id="3992457480" name="Watzmannweg" lane="60913019#2_0" startPos="11.26" endPos="26.26" friendlyPos="true" lines="N81 179"/>
+    <busStop id="3992457481" name="Watzmannweg" lane="4828060#7_0" startPos="11.36" endPos="26.36" friendlyPos="true" lines="179"/>
+    <busStop id="3992457482" name="Wittelsbacherstraße/Augsburger Straße" lane="4394944#11_0" startPos="9.37" endPos="24.37" friendlyPos="true" lines="175"/>
+    <busStop id="4032902707" name="Belßstraße/Marienfelder Allee" lane="69409362#7_0" startPos="2.30" endPos="17.30" friendlyPos="true" lines="N81 283"/>
+    <busStop id="4032902709" name="Colditzstraße/Ullsteinstraße" lane="151621510_0" startPos="19.49" endPos="34.49" friendlyPos="true" lines="170"/>
+    <busStop id="4032902710" name="Colditzstraße/Ullsteinstraße" lane="4677871#4_0" startPos="96.85" endPos="104.31" friendlyPos="true" lines="170"/>
+    <busStop id="4032902716" name="Goldenes Horn Mitte" lane="875796572#2_0" startPos="135.64" endPos="150.64" friendlyPos="true" lines="282"/>
+    <busStop id="4032902721" name="Imbrosweg Ost" lane="45359278#3_0" startPos="9.56" endPos="24.56" friendlyPos="true" lines="282"/>
+    <busStop id="4032902722" name="Imbrosweg" lane="589694465_0" startPos="0.00" endPos="8.75" friendlyPos="true" lines="N77 277 282"/>
+    <busStop id="4032902723" name="Kollostraße" lane="648493467#10_0" startPos="38.66" endPos="53.66" friendlyPos="true" lines="282"/>
+    <busStop id="4032902730" name="Lerchenweg" lane="648493467#4_0" startPos="30.55" endPos="45.55" friendlyPos="true" lines="282"/>
+    <busStop id="4032902743" name="Sonnenscheinpfad" lane="69409362#0_0" startPos="34.27" endPos="49.27" friendlyPos="true" lines="N81 283"/>
+    <busStop id="4032902745" name="Volkmarstraße" lane="4677871#3_0" startPos="2.50" endPos="17.50" friendlyPos="true" lines="170"/>
+    <busStop id="4032902746" name="Volkmarstraße/Ullsteinstraße" lane="40193018#4_0" startPos="37.35" endPos="52.35" friendlyPos="true"/>
+    <busStop id="4484465428" name="U Alt-Mariendorf" lane="156597539#6_0" startPos="36.87" endPos="44.37" friendlyPos="true" lines="M77"/>
+    <busStop id="452659259" name="U Alt-Mariendorf" lane="508171969#4_0" startPos="10.23" endPos="22.73" friendlyPos="true"/>
+    <busStop id="462742599" name="Rohdestraße" lane="31003576#12_0" startPos="72.58" endPos="82.95" friendlyPos="true" lines="M46"/>
+    <busStop id="510602886" name="Bergholzstraße" lane="971029394_0" startPos="0.00" endPos="3.10" friendlyPos="true"/>
+    <busStop id="5548621031" name="U Alt-Tempelhof" lane="311149289#1_0" startPos="29.78" endPos="44.78" friendlyPos="true"/>
+    <busStop id="5592313588" name="Nahmitzer Damm/Motzener Straße" lane="404580761_0" startPos="24.75" endPos="39.75" friendlyPos="true"/>
+    <busStop id="6238926223" name="U Alt-Mariendorf" lane="478432727#0_0" startPos="0.00" endPos="7.70" friendlyPos="true" lines="X71 N77"/>
+    <busStop id="6352560928" name="Mariendorfer Damm/Buckower Chaussee" lane="30962287#18_0" startPos="0.00" endPos="12.10" friendlyPos="true"/>
+    <busStop id="6352560930" name="Mariendorfer Damm/Buckower Chaussee" lane="30962287#17_0" startPos="37.69" endPos="52.69" friendlyPos="true"/>
+    <busStop id="668197715" name="Rixdorfer Straße/Britzer Straße" lane="844639716_0" startPos="0.00" endPos="1.27" friendlyPos="true"/>
+    <busStop id="763448266" name="Industriestraße" lane="156597532#0_0" startPos="13.00" endPos="28.00" friendlyPos="true" lines="N77 277"/>
+    <busStop id="8004513848" name="S Lichtenrade" lane="345381310#1_0" startPos="15.91" endPos="30.91" friendlyPos="true"/>
+    <busStop id="8004513849" name="S Lichtenrade" lane="858109676_0" startPos="15.30" endPos="30.30" friendlyPos="true"/>
+    <busStop id="8198655661" name="U Alt-Mariendorf" lane="881575686_0" startPos="10.42" endPos="25.42" friendlyPos="true" lines="X71"/>
+    <busStop id="853670874" name="Alboinplatz" lane="27734926_0" startPos="1.72" endPos="16.72" friendlyPos="true" lines="106"/>
+</additional>
