@@ -11,6 +11,7 @@ import sumolib
 import sumolib.miscutils
 from sumolib.miscutils import getFreeSocketPort
 from sumolib import checkBinary
+from decibel import dbsum
 
 
 if 'SUMO_HOME' in os.environ:
@@ -41,17 +42,22 @@ with open('data.csv', 'w') as csv_file:
 
 i = 0
 while traci.simulation.getMinExpectedNumber() > 0:
+	traci.simulationStep()
+	i += 1
+
 	vehicles = traci.vehicle.getIDList()
 	total_co2 = 0
 	total_fuel = 0
 	total_noise = 0
 	for vehicle in vehicles:
 		total_co2 += traci.vehicle.getCO2Emission(vehicle)
-	traci.simulationStep()
+		total_fuel += traci.vehicle.getFuelConsumption(vehicle)
+		total_noise = dbsum(total_noise, traci.vehicle.getNoiseEmission(vehicle))
+
 	#print("step:" + str(i))
-	i += 1
 	#print(traci.vehicle.getSubscriptionResults(vehID))
 	#print("CO2: " + str(traci.vehicle.getCO2Emission(vehID)))
+
 	with open('data.csv', 'a') as csv_file:
 		csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 		info = {
@@ -61,10 +67,8 @@ while traci.simulation.getMinExpectedNumber() > 0:
 			"noise": traci.vehicle.getNoiseEmission(vehID),
 			"standing_cars": 42
 		}
-
 		csv_writer.writerow(info)
 	#print(x_value, total_1, total_2, total_3, total_4)
-
 	time.sleep(1)
 
 
