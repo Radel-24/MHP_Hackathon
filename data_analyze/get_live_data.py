@@ -38,14 +38,13 @@ traci.setOrder(int(sys.argv[2]))
 
 fieldnames = ["timestamp", "CO2", "fuel", "noise", "standing_cars"]
 
-with open('../sumoVisualizer/data.csv', 'w') as csv_file:
+with open('./sumoVisualizer/data.csv', 'w') as csv_file:
 	csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 	csv_writer.writeheader()
 
 
 i = 0
 while traci.simulation.getMinExpectedNumber() > 0:
-	traci.simulationStep()
 	i += 1
 
 	vehicles = traci.vehicle.getIDList()
@@ -65,7 +64,7 @@ while traci.simulation.getMinExpectedNumber() > 0:
 	#print(traci.vehicle.getSubscriptionResults(vehID))
 	#print("CO2: " + str(traci.vehicle.getCO2Emission(vehID)))
 
-	with open('../sumoVisualizer/data.csv', 'a') as csv_file:
+	with open('./sumoVisualizer/data.csv', 'a') as csv_file:
 		csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 		info = {
 			"timestamp": i,
@@ -76,10 +75,9 @@ while traci.simulation.getMinExpectedNumber() > 0:
 		}
 		csv_writer.writerow(info)
 	#print(x_value, total_1, total_2, total_3, total_4)
-	time.sleep(1)
 
-	if i == 10:
-		traci.trafficlight.setRedYellowGreenState("0", "yyyy")
+	traci.simulationStep()
+	
 
 
 

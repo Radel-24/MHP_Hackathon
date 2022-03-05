@@ -13,7 +13,7 @@ fig1, (ax1, ax2) = plt.subplots(nrows=2, ncols=1) # create subplots (multiple gr
 
 def animate(i):
 	# read in data from csv file
-	data = pd.read_csv('data.csv')
+	data = pd.read_csv('sumoVisualizer/data.csv')
 	x = data['timestamp']
 	y1 = data['CO2']
 	y2 = data['fuel']

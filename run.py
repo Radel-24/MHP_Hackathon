@@ -14,14 +14,18 @@ else:
 
 freePort = sumolib.miscutils.getFreeSocketPort()
 
+subprocess.Popen(["python", "data_analyze/get_live_data.py", str(freePort), str(2)])
+subprocess.Popen(["python", "simulation_changing/light_change.py", str(freePort), str(3)])
+subprocess.Popen(["python", "sumoVisualizer/graph_visualizer.py"])
+
 sumoBinary = checkBinary('sumo-gui') # change to 'sumo' when running without gui
-traci.start([sumoBinary, "-c", sys.argv[1], "--num-clients", "1", "--emission-output", "emi.xml"], port=freePort)
+traci.start([sumoBinary, "-c", sys.argv[1], "--num-clients", "3", "--emission-output", "emi.xml"], port=freePort)
 
 # traci.start(sumoCmd)
 traci.setOrder(1)
 
 
-subprocess.call(["python", "data_analyze/get_live_data.py", str(freePort), str(2)])
+# subprocess.call(["python", "data_analyze/get_live_data.py", str(freePort), str(2)])
 # subprocess.call("./sumoVisualizer/graph_visualizer.py", 3)
 
 while traci.simulation.getMinExpectedNumber() > 0:
