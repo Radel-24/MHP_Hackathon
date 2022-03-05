@@ -1,3 +1,0 @@
-#!/bin/bash
-python ./data_analyze/get_live_data.py ../sumo/tests/complex/tutorial/traci_tls/data/cross.sumocfg &
-python ./sumoVisualizer/graph_visualizer.py

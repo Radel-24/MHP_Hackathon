@@ -9,11 +9,18 @@ import traci
 traci.init(int(sys.argv[1]))
 traci.setOrder(int(sys.argv[2]))
 
-step = 0
+
+lights = traci.trafficlight.getIDList()
 while traci.simulation.getMinExpectedNumber() > 0:
-	if step == 10:
-		traci.trafficlight.setRedYellowGreenState("0", "yyyy")
-	step += 1
+	# for light in lights:
+	# 	linkIds = traci.trafficlight.getControlledLinks(light)
+	# 	for link in linkIds:
+	# 		print("lights changed" + linkId)
+	# 		blockingVeh = traci.trafficlight.getBlockingVehicles(light, 1)
+	# 		if (len(blockingVeh) > 2):
+	# 			# traci.trafficlight.setPhaseDuration(light, 1)
+	# 			traci.trafficlight.setRedYellowGreenState("rrrr")
+
 	traci.simulationStep()
 
 traci.close()
