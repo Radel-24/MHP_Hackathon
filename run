@@ -1,3 +1,3 @@
 #!/bin/bash
-python3 ./data_analyze/get_live_data.py &
-python3 ./sumoVisualizer/graph_visualizer.py
+python ./data_analyze/get_live_data.py ../sumo/tests/complex/tutorial/traci_tls/data/cross.sumocfg &
+python ./sumoVisualizer/graph_visualizer.py
