@@ -56,7 +56,7 @@ while traci.simulation.getMinExpectedNumber() > 0:
 			continue
 		total_co2 += traci.vehicle.getCO2Emission(vehicle)
 		total_fuel += traci.vehicle.getFuelConsumption(vehicle)
-		total_noise = dbsum(total_noise, float(traci.vehicle.getNoiseEmission(vehicle)))
+		total_noise = dbsum([total_noise, float(traci.vehicle.getNoiseEmission(vehicle))])
 
 	#print("step:" + str(i))
 	#print(traci.vehicle.getSubscriptionResults(vehID))

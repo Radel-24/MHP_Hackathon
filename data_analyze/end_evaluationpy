@@ -1,5 +1,7 @@
 
-# argv[1] gives name of emmisions file
+# this script analyzes the emission output file of the sumo simulation
+
+# argv[1] gives the name of the emmisions file
 
 from telnetlib import VT3270REGIME
 from bs4 import BeautifulSoup
