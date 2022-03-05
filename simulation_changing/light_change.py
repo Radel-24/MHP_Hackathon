@@ -14,6 +14,8 @@ else:
 sumoBinary = checkBinary('sumo-gui') # change to 'sumo' when running without gui
 sumoCmd = [sumoBinary, "-c", sys.argv[1]]
 
+traci.setOrder(2)
+
 traci.start(sumoCmd)
 step = 0
 #while step < 1000:

@@ -51,12 +51,12 @@ while traci.simulation.getMinExpectedNumber() > 0:
 	total_noise = 0
 	standing_cars = 0
 	for vehicle in vehicles:
-		if (traci.vehicle.getSpeed(vehicle) == 0):
+		if (traci.vehicle.getSpeed(vehicle) == 0): # is aiming start/stop automation
 			standing_cars += 1
 			continue
 		total_co2 += traci.vehicle.getCO2Emission(vehicle)
 		total_fuel += traci.vehicle.getFuelConsumption(vehicle)
-		# total_noise = dbsum(total_noise, float(traci.vehicle.getNoiseEmission(vehicle)))
+		total_noise = dbsum(total_noise, float(traci.vehicle.getNoiseEmission(vehicle)))
 
 	#print("step:" + str(i))
 	#print(traci.vehicle.getSubscriptionResults(vehID))
