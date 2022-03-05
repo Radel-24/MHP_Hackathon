@@ -1,5 +1,5 @@
 
-# argv[1] gives name of sumo config file
+# argv[1] gives port on where to connect to sumo simulation
 
 import os
 import sys
