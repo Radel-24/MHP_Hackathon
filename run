@@ -1,0 +1,3 @@
+#!/bin/bash
+python3 ./data_analyze/get_live_data.py &
+python3 ./sumoVisualizer/graph_visualizer.py
