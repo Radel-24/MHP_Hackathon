@@ -68,12 +68,16 @@ while traci.simulation.getMinExpectedNumber() > 0:
 			"timestamp": i,
 			"CO2": total_co2,
 			"fuel": total_fuel,
-			"noise": 42,
+			"noise": total_noise,
 			"standing_cars": standing_cars
 		}
 		csv_writer.writerow(info)
 	#print(x_value, total_1, total_2, total_3, total_4)
 	time.sleep(1)
+
+	if i == 10:
+		traci.trafficlight.setRedYellowGreenState("0", "yyyy")
+
 
 
 	 #print(traci.vehicle.getSubscriptionResults(vehID))
