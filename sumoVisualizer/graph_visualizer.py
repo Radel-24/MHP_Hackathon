@@ -50,7 +50,7 @@ def animate(i):
 
 	plt.tight_layout(pad=3.0)
 
-ani = FuncAnimation(plt.gcf(), animate, interval=1000) # gcf == get current figure
+ani = FuncAnimation(plt.gcf(), animate, interval=500) # gcf == get current figure
 
 plt.tight_layout(pad=3.0)
 plt.show()

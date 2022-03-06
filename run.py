@@ -30,4 +30,7 @@ traci.setOrder(1)
 while traci.simulation.getMinExpectedNumber() > 0:
 	traci.simulationStep()
 
+subprocess.call(["python", "data_analyze/end_evaluation.py", "emi.xml"])
+subprocess.call(["python", "sumoVisualizer/bar_visualizer.py"])
+
 traci.close()

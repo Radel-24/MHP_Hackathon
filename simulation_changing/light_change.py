@@ -37,13 +37,16 @@ def greenCorridor(): # TODO imporve algorithm for setting only certanin lights g
 	traci.trafficlight.setPhase("30340999", 4)
 	
 	
-
 lights = traci.trafficlight.getIDList()
 step = 0
 while traci.simulation.getMinExpectedNumber() > 0:
-	if (step % 200) < 100:
+	for light in lights:
+		vehicles = traci.trafficlight.getRivalVehicles(light, 0)
+	if (step % 300) < 100:
 		greenCorridor()
 	step += 1
+	for vehicle in vehicles:
+		state = traci.trafficlight.getPhase()
 
 	traci.simulationStep()
 

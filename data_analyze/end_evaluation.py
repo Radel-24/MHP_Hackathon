@@ -30,8 +30,13 @@ for vehicle in vehicles:
 	total_fuel += float(vehicle.get('fuel'))
 	total_noise = dbsum([float(vehicle.get('noise')), total_noise])
 
-print("Total CO2: " + str(round(total_co2, 2)) + " mg")
-print("Total CO: " + str(round(total_co, 2)) + " mg")
-print("Total NOx: " + str(round(total_nox, 2)) + " mg")
-print("Total fuel: " + str(round(total_fuel, 2)) + " ml")
+total_co2 = total_co2 / 1000 / 1000
+total_co = total_co / 1000 / 1000
+total_nox = total_nox / 1000
+total_fuel = total_fuel / 1000
+
+print("Total CO2: " + str(round(total_co2, 2)) + " kg")
+print("Total CO: " + str(round(total_co, 2)) + " kg")
+print("Total NOx: " + str(round(total_nox, 2)) + " g")
+print("Total fuel: " + str(round(total_fuel, 2)) + " l")
 print("Total noise: " + str(round(total_noise, 2)) + " db")
