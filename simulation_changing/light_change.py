@@ -10,7 +10,7 @@ traci.init(int(sys.argv[1]))
 traci.setOrder(int(sys.argv[2]))
 
 
-def greenCorridor():
+def greenCorridor(): # TODO imporve algorithm for setting only certanin lights green
 	traci.trafficlight.setPhase("cluster_30340989_7196556440", 0)
 	traci.trafficlight.setPhase("GS_8075882156", 2)
 	traci.trafficlight.setPhase("cluster_30340990_7196556438", 2)
@@ -35,28 +35,16 @@ def greenCorridor():
 	traci.trafficlight.setPhase("cluster_5840582514_8075848381", 2)
 	traci.trafficlight.setPhase("cluster_30341001_7196556423_8075848383", 2)
 	traci.trafficlight.setPhase("30340999", 4)
-	traci.trafficlight.setPhase("30341000", 0)
-	# traci.trafficlight.setPhase("cluster_268840707_8398087656", 0)
-	# traci.trafficlight.setPhase("cluster_268840707_8398087656", 0)
 	
 	
 
 lights = traci.trafficlight.getIDList()
 step = 0
 while traci.simulation.getMinExpectedNumber() > 0:
-	# for light in lights:
-	# 	linkIds = traci.trafficlight.getControlledLinks(light)
-	# 	for link in linkIds:
-	# 		print("lights changed" + linkId)
-	# 		blockingVeh = traci.trafficlight.getBlockingVehicles(light, 1)
-	# 		if (len(blockingVeh) > 2):
-	# 			# traci.trafficlight.setPhaseDuration(light, 1)
-	# 			traci.trafficlight.setRedYellowGreenState("rrrr")
-	if step > 200:
+	if (step % 200) < 100:
 		greenCorridor()
-
-	
 	step += 1
+
 	traci.simulationStep()
 
 traci.close()
